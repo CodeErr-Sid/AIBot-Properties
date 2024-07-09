@@ -1,0 +1,217 @@
+:root {
+    --width: 90vw;
+}
+
+.carousel {
+    aspect-ratio: 16/9;
+    width: var(--width);
+    height: auto;
+    position: relative;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+    margin-left: 4vw;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    height: 100%;
+    width: 3rem;
+    z-index: 2;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow>img {
+    height: 2rem;
+    transition: all 400ms ease-in-out;
+}
+
+.back-arrow {
+    left: 0;
+    width: 5vw;
+    height: 5vw;
+    background-color: #eb212a;
+    border-radius: 50%;
+}
+
+.back-arrow:hover>img {
+    transform: translateX(-30%) scale(1.4);
+}
+
+.next-arrow {
+    right: 0;
+    width: 5vw;
+    height: 5vw;
+    background-color: #eb212a;
+    border-radius: 50%;
+}
+
+.next-arrow:hover>img {
+    transform: translateX(30%) scale(1.4);
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide-i {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card {
+    width: 80%;
+    height: 80%;
+    /* background-image: url('https://metropolitan.realestate/wp-content/uploads/2021/11/11-types-of-dubai-commercial-property-for-foreigners-to-buy-1.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    box-shadow: 3px 12px 36px rgba(0, 0, 0, 0.1);
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.top-cards {
+    display: flex;
+    height: 30%;
+    margin-bottom: 1vw;
+}
+
+.left-card {
+    width: 70%;
+    margin-right: 1vw;
+    box-shadow: 3px 12px 36px rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+    padding: 1vw;
+    background-color: white;
+}
+
+.right-card {
+    width: 30%;
+    box-shadow: 3px 12px 36px rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background-color: white;
+}
+
+.bottom-cards {
+    display: flex;
+    height: 70%;
+}
+
+.bottom-card {
+    width: 50%;
+    background-color: #eeeeee;
+    border-radius: 1vw;
+    margin-right: 1vw;
+    box-shadow: 3px 12px 36px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-card p {
+    text-align: start;
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 2vw;
+    font-family: system-ui;
+}
+
+.bottom-card .div {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-left: 2vw;
+}
+
+.bottom-card .imgbox {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.bottom-card h1 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container label {
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.input-container .input {
+    /* padding: 0.5vw; */
+    border: 1px solid #ddd;
+    border-radius: 0.5vw;
+}
+
+.input-container .input h1 {
+    color: rgb(102, 98, 98);
+    font-size: 1vw;
+    padding: 1em;
+    line-height: inherit;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-bottom: 0;
+}
+
+.number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-container .name {
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+
+.number-container .number {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.total {
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}

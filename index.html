@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dubai Real Estate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/textillate/animate.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/casestudyslider.css">
+  <link rel="stylesheet" href="css/clippathslider.css">
+  <link rel="stylesheet" href="css/cardsstyle.css">
+  <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+</head>
+
+<body>
+
+  <!-- preloader -->
+  <div id="sidloader">
+    <img src="assets/loader/sand-clock-loader.gif" alt="">
+  </div>
+
+
+  <main id="primary" class="site-main" data-barba="container">
+    <div id="content" class="page-content">
+      <!-- rasmi code -->
+
+      <style>
+        .logo {
+          position: absolute;
+          left: 20px;
+          width: 11rem;
+        }
+
+        .logo img {
+          width: 100%;
+        }
+      </style>
+
+      <!-- navbar -->
+      <nav class="navbar" style="position: fixed;">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="logo" />
+          <!-- <a href="">Real Estate</a> -->
+        </div>
+        <ul class="nav-links">
+          <li><a class="nava" href="#db-properties" data-menu-name="Services">Properties</a></li>
+          <li><a class="nava" href="#db-partners" data-menu-name="About">Partners</a></li>
+          <li><a class="nava" href="#db-testimonials" data-menu-name="Testimonial">Testimonials</a></li>
+          <li><a class="nava" href="#db-contact" data-menu-name="Contact us">Contact us</a></li>
+        </ul>
+      </nav>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const navbar = document.querySelector('.navbar');
+
+          window.addEventListener('scroll', function () {
+            if (window.scrollY === 0) {
+              navbar.classList.add('transparent');
+              navbar.classList.remove('bg-white');
+            } else {
+              navbar.classList.remove('transparent');
+              navbar.classList.add('bg-white');
+            }
+          });
+
+          // Initial check
+          if (window.scrollY === 0) {
+            navbar.classList.add('transparent');
+          } else {
+            navbar.classList.add('white-background');
+          }
+        });
+
+      </script>
+
+      <!-- navbar -->
+      <!-- <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </div> -->
+
+      <style>
+        .cp-section,
+        .normal-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          position: relative;
+        }
+
+        .cp-img {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100;
+          object-fit: cover;
+          pointer-events: none;
+          clip-path: circle(0px at center);
+          z-index: 1;
+          filter: brightness(.9);
+        }
+
+        .cp-img-2 {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100;
+          z-index: -2;
+          object-fit: cover;
+          pointer-events: none;
+        }
+
+
+        .normal-section {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          background-color: transparent;
+          padding: 5rem;
+          flex-direction: column;
+          position: relative;
+          margin-top: 13rem;
+          /* z-index: 23; */
+          z-index: 1;
+          font-weight: 600;
+          font-size: 3rem;
+          color: white;
+        }
+
+        .z-index-section {
+          z-index: 3;
+        }
+
+        .cp-section {
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .cp-section h4 {
+          text-align: center;
+          z-index: 3;
+          width: 70%;
+          position: relative;
+          letter-spacing: 0px;
+        }
+
+        .cp-section h4,
+        .normal-section {
+          text-align: center;
+          font-family: "Montserrat", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 700;
+          font-style: normal;
+          /* text-transform: uppercase; */
+        }
+
+        .cp-section h4 .drb-thin {
+          font-weight: 400;
+        }
+
+        .cp-img-2-p {
+          position: absolute;
+          top: 50%;
+          bottom: 50%;
+        }
+
+        .normal-section p {
+          font-size: 3rem;
+          font-weight: 500;
+          line-height: 1;
+          text-align: center;
+        }
+
+        .normal-section h4 .author-post {
+          font-size: 1rem;
+        }
+
+        .drb-main {
+          font-weight: 300;
+        }
+
+        .author-small {
+          font-size: 1.4rem;
+        }
+
+        .font-weight-900 {
+          font-weight: 900;
+        }
+
+        .drb-big {
+          font-size: 3rem;
+        }
+
+        .drb-way {
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+
+        .drb-big-f {
+          font-weight: 3.5rem;
+        }
+      </style>
+
+      <section class="cp-section">
+        <h4 style="font-weight: bold;">
+          <span class="drb-left animate__animated drb-big" style="animation-delay: 0s;">“Future</span>
+          <span class="drb-tlt  animate__animated drb-main" style="animation-delay: 1s;">generations will be living in a world that is very different from that to which we are accustomed. It is essential that we prepare ourselves and our children for</span>
+          <br>
+          <span style="font-weight: 300;" class="drb-main-after">that</span><span class="drb-right animate__animated drb-big" style="animation-delay: 3s;">New World”</span>
+          <br><br>
+          <span class="author-name animate__animated" style="animation-delay: 5s;font-weight: 400;">- HH Sheikh Zayed bin Sultan Al Nahyan -</span>
+          <br>
+          <span class="author-post animate__animated author-small" style="animation-delay: 6s;font-weight: 400;">(Founding Father of United Arab Emirates)</span>
+        </h4>
+
+
+        <video class="cp-img-2" id="myVideo" autoplay muted loop>
+          <source src="assets/video1.mp4" type="video/webm" />
+        </video>
+
+        <!-- ovelay text -->
+
+
+
+        <video class="cp-img" id="myVideo" autoplay muted loop>
+          <source src="assets/video2.mp4" type="video/webm" />
+        </video>
+
+
+      </section>
+      <section class="normal-section" style="text-transform: uppercase;">
+        <p>
+          That<span class="font-weight-900 drb-big-f"> NEW WORLD</span> is in Dubai
+          <br>
+           Investing in that
+          <br>
+          <span class="font-weight-900 drb-big-f">future</span>
+          <br>
+          <br>
+          <span class="drb-way">What about you?</span>
+        </p>
+        <p class="typewriter-effect"></p>
+      </section>
+
+      <!-- <section class="section top-section">
+        <div class="content-container content-theme-light">
+          <div class="content-inner">
+            <div class="content-center">
+              <img src="assets/old.jpeg" class="background-video hero-opacity-image" alt="">
+              <h4 class="fvp-h">Dubai's Dynamic Present</h4>
+              <p class="fvp-p">
+                Dubai, with 3.3 million residents, is a hub of luxury and innovation. Attracting global residents and
+                tourists, it shapes the future as a premier destination with its world-class lifestyle and modern
+                amenities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bottom-section">
+        <div class="content-container content-theme-light">
+          <div class="content-inner">
+            <div class="content-center">
+              <img src="assets/new.jpeg" class="background-video hero-opacity-image" alt="">
+              <h4 class="fvp-h">Dubai's Bright Future</h4>
+              <p class="fvp-p">
+                In six years, Dubai’s population will surge from 3.3 to 5.8 million. This growth will drive new
+                developments and bolster its status as a top global living destination, increasing both residents and
+                tourists.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- rasmi code -->
+
+      <!-- old vs new dubai -->
+      <!-- <style>
+        .nvod-bumper {
+          text-align: center;
+          padding: 128px 16px;
+          background-color: #efefef;
+        }
+
+        .nvod-container {
+          position: relative;
+          width: 100%;
+          min-height: 100vh;
+          z-index: 1;
+          background-color: white;
+          padding: 2em;
+        }
+
+        .nvod-space-holder {
+          position: relative;
+          width: 100%;
+        }
+
+        .nvod-sticky {
+          position: sticky;
+          border-radius: 2rem;
+          top: 0;
+          height: 100vh;
+          width: 100%;
+          overflow-x: hidden;
+          z-index: 2;
+        }
+
+        .nvod-horizontal {
+          position: absolute;
+          height: 100%;
+          will-change: transform;
+        }
+
+        .nvod-cards {
+          position: relative;
+          height: 100%;
+          /* padding: 0 0 0 150px; */
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .nvod-sample-card {
+          position: relative;
+          height: 100%;
+          width: 100vw;
+          /* margin-right: 75px; */
+          flex-shrink: 0;
+        }
+
+        .nvod-sample-card img {
+          width: 100%;
+        }
+      </style>
+
+      <section class="nvod-container z-index-section">
+        <div class="nvod-space-holder">
+          <div class="nvod-sticky">
+            <div class="nvod-horizontal">
+              <section role="feed" class="nvod-cards">
+                <article class="nvod-sample-card">
+                  <img src="assets/old.jpeg" class="background-video hero-opacity-image" alt="">
+
+                </article>
+                <article class="nvod-sample-card">
+                  <img src="assets/new.jpeg" class="background-video hero-opacity-image" alt="">
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        const spaceHolder = document.querySelector('.nvod-space-holder');
+        const horizontal = document.querySelector('.nvod-horizontal');
+        spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+
+        function calcDynamicHeight(ref) {
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const objectWidth = ref.scrollWidth;
+          return objectWidth - vw + vh; // 150 is the padding (in pixels) desired on the right side of the .nvod-cards container. This can be set to whatever your styles dictate
+        }
+
+        window.addEventListener('scroll', () => {
+          const sticky = document.querySelector('.nvod-sticky');
+          horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
+        });
+
+        window.addEventListener('resize', () => {
+          spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+        });
+      </script> -->
+      <section class="fty-outer-section z-index-section" style="background-color: white;position: relative;">
+
+        <div class="fty-carousel" data-flickity='{ "wrapAround": true }'>
+
+
+          <main class="fty-carousel-cell">
+            <div class="fty-container">
+              <div class="fty-image-container">
+                <img class="fty-image-before fty-slider-image" src="assets/comp/3.png" alt="color photo" />
+                <img class="fty-image-after fty-slider-image" src="assets/comp/4.png" alt="black and white" />
+              </div>
+              <!-- step="10" -->
+              <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                class="fty-slider active" />
+              <div class="fty-slider-line" aria-hidden="true"></div>
+              <div class="fty-slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                  <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+              </div>
+            </div>
+          </main>
+          <main class="fty-carousel-cell">
+            <div class="fty-container">
+              <div class="fty-image-container">
+                <img class="fty-image-before fty-slider-image" src="assets/comp/5.png" alt="color photo" />
+                <img class="fty-image-after fty-slider-image" src="assets/comp/6.png" alt="black and white" />
+              </div>
+              <!-- step="10" -->
+              <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                class="fty-slider active" />
+              <div class="fty-slider-line" aria-hidden="true"></div>
+              <div class="fty-slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                  <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+              </div>
+            </div>
+          </main>
+
+          <main class="fty-carousel-cell">
+            <div class="fty-container active">
+              <div class="fty-image-container">
+                <img class="fty-image-before fty-slider-image" src="assets/comp/1.png" alt="color photo" />
+                <img class="fty-image-after fty-slider-image" src="assets/comp/2.png" alt="black and white" />
+              </div>
+              <!-- step="10" -->
+              <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                class="fty-slider" />
+              <div class="fty-slider-line" aria-hidden="true"></div>
+              <div class="fty-slider-button" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                  <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></line>
+                  <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="16"></polyline>
+                </svg>
+              </div>
+            </div>
+          </main>
+
+        </div>
+
+      </section>
+
+      <!-- old vs new dubai -->
+
+      <!-- Siddique -->
+      <div class="z-index-section" style=" background-color: white; color: black; position: relative;">
+        <h3 id="abc123" style="text-align: center; font-weight: 800; color: #0C2544; text-transform: uppercase; ">
+          <br>Shaping Tomorrow, Today
+        </h3>
+        <p style="text-align: center; color: black;margin-bottom: 0;">Driven by visionary leadership and strategic
+          urban planning, Dubai is shaping a remarkable future</p>
+      </div>
+      
+      <div class="video-container-sid z-index-section">
+        <video autoplay muted loop id="video" class="video" controls>
+          <source src="assets/dubai40.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+          <button id="playPauseButton" class="play-pause-button play"></button>
+        </div>
+        
+      </div>
+
+      
+
+      <script>
+        const img = document.querySelector('.cp-img')
+        window.addEventListener('scroll', () => {
+          const current = window.scrollY;
+          img.style.clipPath = `circle(${current}px at center)`
+        })
+
+      </script>
+
+      <script>
+        const video = document.getElementById('video');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        playPauseButton.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+            playPauseButton.classList.remove('play');
+            playPauseButton.classList.add('pause');
+          } else {
+            video.pause();
+            playPauseButton.classList.remove('pause');
+            playPauseButton.classList.add('play');
+          }
+        });
+
+        video.addEventListener('play', () => {
+          playPauseButton.classList.remove('play');
+          playPauseButton.classList.add('pause');
+        });
+
+        video.addEventListener('pause', () => {
+          playPauseButton.classList.remove('pause');
+          playPauseButton.classList.add('play');
+        });
+      </script>
+      <!-- Siddique-->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var h2Element = document.getElementById('fade-txt');
+          h2Element.style.opacity = 1;
+        });
+      </script>
+
+
+      <div class="container-sid1-siid z-index-section" style="position: relative;">
+        <div class="sid-inner-section" class="border-top-radius" style="background-color: var(--zarak-blue);">
+          <h3 id="abc125" style="text-align: center;   font-weight: 800; color: white; text-transform: uppercase;">
+            Seizing The Future
+          </h3>
+
+          <p style="text-align: center; color: white;">Dubai is rapidly catching up with the world's top metropolises.
+            Seize the Opportunity now - Don't be left behind !</p>
+
+          <div class="image-wrapper11">
+            <img src="assets/ubsworld.jpg" alt="Example Image">
+          </div>
+
+
+          <div class="container11">
+
+
+            <div class="box11 box111">
+              <img src="assets/img/london1a.png">
+            </div>
+            <div class="box11 box112">
+              <img src="assets/img/uae1a.png">
+            </div>
+            <div class="box11 box113">
+              <img src="assets/img/paris1a.png">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <script>
+        let currentSlide = 0;
+
+        function moveSlide(n) {
+          const slides = document.querySelector('.slides-siid');
+          const totalSlides = slides.children.length;
+
+          currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+          slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+      </script>
+
+      <style>
+        .border-top-radius {
+          border-top-left-radius: 3rem;
+          border-top-right-radius: 3rem;
+        }
+      </style>
+
+      <!-- Inthisar sectoin card slider case study -->
+      <!-- <section class="outer-section z-index-section" style="position: relative;background-color: var(--zarak-blue);">
+        <section class="inner-section border-top-radius" style="background-color: white">
+          <h3 id="abc12"
+            style="text-align: center;z-index: 3;margin-bottom:0;position: relative; font-weight: 800; color: #0C2544; text-transform: uppercase;">
+            <br>Real Stories
+            Real
+            Success
+          </h3>
+          <div class="carousel z-index-section" style="position: relative;">
+            <button class="arrow back-arrow">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+" />
+            </button>
+            <div class="slides-container">
+              <div class="slide-i showcase">
+                <div class="main-card" style="background-image: url('./assets/bruj.jpeg');">
+                  <div class="top-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="name1">Investor Profile:</label>
+                        <div class="input">
+                          <h1 style="display:flex; align-items: center;">Maria.B
+                          </h1>
+                        </div>
+
+                        <input type="text" id="name1" placeholder="Sawwy Investor" />
+                      </div>
+                      <div class="input-container">
+                        <label for="strategy">Strategy</label>
+                        <div class="input">
+                          <h1>OFF PLAN RESALE</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-card">
+                      <div class="number-container">
+                        <div class="name">Capital Gain</div>
+                        <div class="number">+ 150,000$</div>
+                      </div>
+                      <div class="total">2 years</div>
+                    </div>
+                  </div>
+                  <div class="bottom-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="project">Project:</label>
+                        <div class="input">
+                          <h1> Ldamac lagoons villa</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="unit">Unit</label>
+                        <div class="input">
+                          <h1>1 Bedroom Appt </h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="purchase">02/2021 Purchase</label>
+                        <div class="input">
+                          <h1>600,000$</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="resale">05/2023 Resale</label>
+                        <div class="input">
+                          <h1>750,000$</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-card">
+                       <p>
+                      Investing in foreign property was daunting, but their team’s expertise in local and
+                      international
+                      markets made it effortless. They guided me patiently, ensuring informed decisions.
+                    </p>
+                    <div class="div">
+                      <div class="imgbox">
+                        <img src="" alt="" />
+                      </div>
+                      <h1>@Maria.B</h1>
+                    </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-i">
+                <div class="main-card" style="background-image: url('./assets/dubai.webp');">
+                  <div class="top-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="name1">Investor Profile: </label>
+                        <div class="input">
+                          <h1 style="display: flex; align-items: center;">Patrick G
+                        </div>
+                        <input type="text" id="name1" placeholder="Sawwy Investor" />
+                      </div>
+                      <div class="input-container">
+                        <label for="strategy">Strategy</label>
+                        <div class="input">
+                          <h1>READY BUY & HOLD</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-card">
+                      <div class="number-container">
+                        <div class="name">Capital Gain</div>
+                        <div class="number">+ 75,000$</div>
+                      </div>
+                      <div class="total">2 years</div>
+                    </div>
+                  </div>
+                  <div class="bottom-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="project">Project:</label>
+                        <div class="input">
+                          <h1>Jumeirah Beach Residence</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="unit">Unit</label>
+                        <div class="input">
+                          <h1>Studio</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="purchase">02/2023 Purchase</label>
+                        <div class="input">
+                          <h1>250,000$</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="resale">02/2024 Resale</label>
+                        <div class="input">
+                          <h1>320,000$</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-card">
+                       <p>
+                      As a tech-savvy investor, I value their data-driven approach and innovative tools. Their tech
+                      expertise in analyzing market trends and opportunities is impressive.
+                    </p>
+                    <div class="div">
+                      <div class="imgbox">
+                        <img src="" alt="" />
+                      </div>
+                      <h1>@Pactrick G</h1>
+                    </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-i">
+                <div class="main-card" style="background-image: url('./assets/futuremeasum.jpg');">
+                  <div class="top-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="name1">Investor Profile:</label>
+                        <div class="input">
+                          <h1 style="display: flex; align-items: center;">Kumar .B</h1>
+                        </div>
+                         <input type="text" id="name1" placeholder="Sawwy Investor" /> 
+                      </div>
+                      <div class="input-container">
+                        <label for="strategy">Strategy</label>
+                        <div class="input">
+                          <h1>OFFPLAN PRE LAUNCH </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right-card">
+                      <div class="number-container">
+                        <div class="name">Capital Gain</div>
+                        <div class="number">+ 600,000$</div>
+                      </div>
+                      <div class="total">6 Months</div>
+                    </div>
+                  </div>
+                  <div class="bottom-cards">
+                    <div class="left-card">
+                      <div class="input-container">
+                        <label for="project">Project:</label>
+                        <div class="input">
+                          <h1>OCEANZ POST HANDOVER</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="unit">Unit</label>
+                        <div class="input">
+                          <h1>1 Bed Room</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="purchase">12/2023 Purchase</label>
+                        <div class="input">
+                          <h1>350,000$</h1>
+                        </div>
+                      </div>
+                      <div class="input-container">
+                        <label for="resale">04/2024 Resale</label>
+                        <div class="input">
+                          <h1>400,000$</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-card">
+                       <p>
+                      In 10 years, their team's conservative strategies and meticulous research have provided me
+                      with
+                      steady
+                      passive income and peace of mind. Unmatched professionalism and support.
+                    </p>
+                    <div class="div">
+                      <div class="imgbox">
+                        <img src="" alt="" />
+                      </div>
+                      <h1>@Kumar B</h1>
+                    </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="arrow next-arrow">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+"
+                style="transform:rotate(180deg)" />
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="outer-card-section z-index-section" style="background-color: white;position: relative;">
+      </section> -->
+
+      <section class="z-index-section" style="position: relative; background-color: white;">
+        <h3 id="abc12599" style="text-align: center; color: var(--zarak-blue);font-weight: 700;"><br><br>
+          Real Story Real Success
+        </h3>
+      </section>
+
+      <section id="db-testimonials" class="outer-card-section z-index-section"
+        style="background-color: white;position: relative;">
+        <div class="cardsection">
+          <div class="scroll-container">
+            <div class="cards-i">
+              <div class="card-i">
+                <div class="pro">
+                  <div class="proimg">
+                    <img src="assets/img/london.jpeg" alt="assets/img/m.avif" />
+                  </div>
+                  <div class="protitle">
+                    <div class="proname">Maria B
+                    </div>
+                  </div>
+                  <!-- <div class="prosubname" style="align-items: center;">From <img style="width: auto; height: 20px; margin-left: 5px; " src="assets/img/india.jpeg" alt=""></div> -->
+                </div>
+                <p>
+                  Investing in foreign property was daunting, but their team’s expertise in local and international
+                  markets made it effortless. They guided me patiently, ensuring informed decisions.
+                </p>
+              </div>
+
+
+              <div class="card-i">
+                <div class="pro">
+                  <div class="proimg">
+                    <img src="assets/img/france.png" alt="assets/img/m.avif" />
+                  </div>
+                  <div class="protitle">
+                    <div class="proname">Patrick G.</div>
+                  </div>
+                </div>
+                <p>
+                  As a tech-savvy investor, I value their data-driven approach and innovative tools. Their tech
+                  expertise in analyzing market trends and opportunities is impressive.
+                </p>
+              </div>
+              <div class="card-i">
+                <div class="pro">
+                  <div class="proimg">
+                    <img src="assets/img/india.jpeg" alt="assets/img/m.avif" />
+                  </div>
+                  <div class="protitle">
+                    <div class="proname">Kumar B</div>
+                  </div>
+                </div>
+                <p>
+                  In 10 years, their team's conservative strategies and meticulous research have provided me with steady
+                  passive income and peace of mind. Unmatched professionalism and support.
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <button class="btn"> <span>click here</span>
+          </button>
+        </div>
+      </section>
+
+
+      <!-- Inthisar sectoin card slider case study -->
+
+      <!-- card stack -->
+      <section id="db-properties" class="outer-card-section z-index-section"
+        style="background-color: white;position: relative;">
+        <section class="card-section" style="border-top-left-radius: 3rem;border-top-right-radius: 3rem;">
+          <h3 id="abc124" style="text-align: center;  font-weight: 800; color: white; text-transform: uppercase;">
+            <br>Featured Properties
+          </h3>
+          <main class="card-main">
+            <ul id="cards">
+              <li class="card" id="card_1">
+                <div class="card__content">
+                  <div>
+                    <h2>Peace Lagoons</h2>
+                    <p>
+                      Peace Lagoons is an innovative residential project located in Dubai Land Residence Complex, offering studio, 1, and 2-bedroom apartments. This luxurious complex features unique amenities such as a lagoon within the apartment area, private pools for each residence, a kids' play area, volleyball court, gymnasium, yoga area, and a 30,000 sqft shopping mall. Peace Lagoons combines elegance and modern living, redefining luxury with a 1% monthly payment plan.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/laggon3d.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+              <li class="card" id="card_2">
+                <div class="card__content">
+                  <div>
+                    <h2>Venera at The Valley Phase 2</h2>
+                    <p>Venera at The Valley Phase 2 offers elegantly designed 3 and 4-bedroom townhouses. Located in Dubai, this development is inspired by nature, featuring rolling hills, lush meadows, and scenic landscapes. Residents can enjoy amenities like sports courts, kids' play areas, community centers, and adventure trails. The townhouses are part of a vibrant community that offers a luxury living experience intertwined with nature, providing a serene yet adventurous lifestyle.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/property360.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+              <li class="card" id="card_3">
+                <div class="card__content">
+                  <div>
+                    <h2>360 Riverside Crescent</h2>
+                    <p>
+                      360 Riverside Crescent is a prestigious 57-story residential development by Sobha Realty located in Sobha Hartland 2, Meydan, Dubai. It features luxury 1, 1.5, and 2-bedroom apartment. The project is known for its diamond-shaped architectural design and offers a resort-style living experience. Amenities include a state-of-the-art infinity pool, jacuzzi, sports facilities like paddle tennis and squash courts, and sky gardens on the 18th and 43rd floors offering stunning views. The project is slated for handover in January 2027.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/venera.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+
+
+            </ul>
+          </main>
+          <aside>
+          </aside>
+        </section>
+      </section>
+      <!-- card stack -->
+
+      <!-- Siddique's Code -->
+      <section id="db-partners" class="outer-card-section z-index-section"
+        style="background-color: var(--zarak-blue);position: relative;">
+        <section class="partners"
+          style="background-color: white;border-top-left-radius: 3rem;border-top-right-radius: 3rem;">
+          <div class="header">
+            <h1 style="font-weight: 800; color: #0C2544; text-transform: uppercase;" id="ourpartners">Our Partners</h1>
+            <p> we are proud to collaborate with esteemed partners from around the globe. These alliances empower us to
+              offer unparalleled real estate opportunities and services, ensuring our clients benefit from a truly
+              global perspective.
+            </p>
+          </div>
+          <div class="logo-container">
+            <div class="logo-item">
+              <img src="assets/partners/c1.png" alt="Partner 1">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c2.png" alt="Partner 2">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c3.png" alt="Partner 3">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c4.jpeg" alt="Partner 4">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c5.png" alt="Partner 5">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c6.png" alt="Partner 6">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c7.png" alt="Partner 7">
+            </div>
+            <div class="logo-item">
+              <img src="assets/partners/c8.jpeg" alt="Partner 8">
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Siddique's Code -->
+
+
+
+      <!-- where to start section -->
+      <section class="outer-card-section z-index-section"
+        style="background-color: white;color: white;position: relative;">
+        <h3 style="text-align: center; color: var(--zarak-blue);font-weight: 700;"><br><br>Ready to Begin Your
+          Investment Journey?</h3>
+        <div class="wrapper" style="border-radius:3rem;background-color: var(--zarak-blue);">
+
+          <div class="c-col-12">
+            <div class="nayla-infinite-tabs" data-duration="0.5">
+              <ul class="tab-title-wrap">
+                <li class="tab-title md-title active">Client Meet</li>
+                <li class="tab-title md-title">Opportunity</li>
+                <li class="tab-title md-title">ROI Proposal</li>
+                <li class="tab-title md-title">Deal</li>
+              </ul>
+              <div class="tab-contents-wrap">
+
+                <div class="tab-content active">
+                  <div class="c-col-4 hide-mobile">1</div>
+                  <div class="c-col-8 sm-12">
+                    <div class="text-wrapper">
+                      <p class="text-h5">
+                        Begin with a personalized consultation where we delve into your ambitions and preferences. Our
+                        approach is rooted in understanding your unique investment goals, ensuring every decision aligns
+                        with your vision. Dive deep into a strategy that sets you on a successful path.
+                      </p>
+
+                    </div>
+
+                    <span class="empty-space hide-mobile" style="height: 75px"></span>
+
+                    <div class="nayla-button has-anim maskUp">
+                      <!-- <a href="#" class="outline" data-hover="all">
+                      View our profile
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content">
+                  <div class="c-col-4 hide-mobile">2</div>
+
+                  <div class="c-col-8 sm-12">
+                    <div class="text-wrapper">
+                      <p class="text-h5">
+                        Explore our meticulously curated portfolio of premier properties. Each opportunity is selected
+                        for its potential to deliver strong returns within Dubai’s thriving market. We present you with
+                        tailored options that promise investment value and a fulfilling lifestyle.
+                      </p>
+
+                    </div>
+
+                    <span class="empty-space hide-mobile" style="height: 75px"></span>
+
+                    <div class="nayla-button has-anim maskUp">
+                      <!-- <a href="#" class="outline" data-hover="all">
+                      View our profile
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content">
+                  <div class="c-col-4 hide-mobile">3</div>
+
+                  <div class="c-col-8 sm-12">
+                    <div class="text-wrapper">
+                      <p class="text-h5">
+                        Receive a detailed Return on Investment proposal crafted specifically for you. Backed by
+                        comprehensive market analysis and insights, our proposal outlines potential growth and financial
+                        benefits. This empowers you to make informed decisions with clarity and confidence.
+                      </p>
+
+                    </div>
+
+                    <span class="empty-space hide-mobile" style="height: 75px"></span>
+
+                    <div class="nayla-button has-anim maskUp">
+                      <!-- <a href="#" class="outline" data-hover="all">
+                      View our profile
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content">
+                  <div class="c-col-4 hide-mobile">4</div>
+                  <div class="c-col-8 sm-12">
+                    <div class="text-wrapper">
+                      <p class="text-h5">
+                        Seal your investment journey seamlessly. Our dedicated team manages all aspects of documentation
+                        and legal formalities, ensuring a smooth and efficient process from negotiation to finalization.
+                        Your satisfaction and peace of mind are our priorities.
+                      </p>
+
+                    </div>
+
+                    <span class="empty-space hide-mobile" style="height: 75px"></span>
+
+                    <div class="nayla-button has-anim maskUp">
+                      <!-- <a href="#" class="outline" data-hover="all">
+                      View our profile
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- where to start section -->
+
+      <!-- cta  -->
+
+      <style>
+        .zm-client-heading {
+          text-transform: capitalize;
+        }
+
+        .zm-c-blue-line {
+          background-color: blue;
+          width: 15%;
+          height: 2px;
+          margin: 1rem 0;
+        }
+
+        .zm-c-secondary-heading {
+          margin: .5em 0;
+        }
+
+
+        .c-row-item {
+          display: flex;
+          height: 129px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .zm-c-content .lead {
+          font-size: 108%;
+          text-align: center;
+        }
+
+        .nayla-button1 {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          text-align: center;
+          border-radius: 50px;
+          padding: 20px;
+          /* Adjust padding as needed */
+          border: 1px solid #0C2544;
+          /* Outline for the button */
+          background-color: #fff;
+          /* Background color for the button */
+        }
+
+        .nayla-button1:hover {
+          color: white;
+          background-color: #0C2544;
+        }
+
+        .nayla-button1 a {
+          display: inline-block;
+          transform: scale(1);
+          transition: transform 0.3s ease-in-out;
+          text-decoration: none;
+          color: inherit;
+          font-size: 16px;
+          /* Initial font size */
+        }
+
+        .nayla-button1:hover a {
+          transform: scale(1.2);
+          /* Scale up the text */
+
+        }
+      </style>
+
+      <style>
+        #banner3 {
+          /* position: absolute; */
+
+          overflow: hidden;
+          /* display: flex; */
+          /* justify-content: center; */
+          /* align-items: center; */
+        }
+
+        #banner3 video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        #banner3 h1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-weight: 800;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          background: white;
+          text-align: center;
+          color: black;
+          line-height: 100vh;
+          mix-blend-mode: screen;
+
+        }
+      </style>
+
+
+
+      <section id="db-contact" class="outer-section-w z-index-section"
+        style="background-color: white;position: relative">
+        <section class="inner-section bg-white" style="padding: 25px;">
+          <div class="page-section container col-xxl-8 px-4 py-5">
+            <div class="row align-items-center g-5 py-5 px-4">
+              <div class="zm-c-content text-center" id="banner3">
+                <video autoplay loop muted src="assets/video/bg.mp4"></video>
+                <h1 class="display-4 fw-bold lh-1 mb-3 zm-client-heading reveal-type" data-bg-color="gray"
+                  data-fg-color="#0C2544" style="font-size: 3rem;
+                line-height: 1;
+                text-align: center;
+                font-weight: 7 00; text-transform: uppercase;">
+                  Act Now to Secure Your Investment in Dubai<br>
+                </h1>
+                <!-- <div class="zm-c-blue-line"></div> -->
+                <div class="txt-cont">
+                  <p class="lead " id="my_text" style="animation: 2s;">
+                    <br><br>Schedule a meeting with our team today to explore your opportunities in Dubai. This is your
+                    moment
+                    to seize a stable and promising future in one of the world’s most dynamic cities. With our expert
+                    guidance, secure your place in Dubai’s thriving landscape.
+                  </p>
+                </div>
+                <div class="c-col-12 align-center">
+
+                  <!-- <div class="nayla-button1 outline " data-icon="arrow_outward">
+
+                    <a href="https://calendly.com/aibotproperties-info/30min">Contact Us</a>
+                  </div> -->
+                  <!-- Calendly inline widget begin -->
+                  <div class="calendly-inline-widget" data-url="https://calendly.com/aibotproperties-info/30min"
+                    style="min-width:320px;height:700px;"></div>
+                  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+                  <!-- Calendly inline widget end -->
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <style>
+        /* Initial state */
+        #my_text {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        /* Animation state */
+        #my_text.reveal {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var target = document.getElementById("my_text");
+
+          function revealOnScroll() {
+            var rect = target.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
+              target.classList.add("reveal");
+            } else {
+              target.classList.remove("reveal");
+            }
+          }
+
+          window.addEventListener("scroll", revealOnScroll);
+          revealOnScroll();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var target = document.getElementById("my_text");
+
+          function revealOnScroll() {
+            var rect = target.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
+              target.classList.add("reveal");
+              // Remove the event listener after the element is revealed to improve performance
+              window.removeEventListener("scroll", revealOnScroll);
+            }
+          }
+
+          window.addEventListener("scroll", revealOnScroll);
+          // Check if the element is already in view (in case the user starts in the middle of the page)
+          revealOnScroll();
+        });
+
+      </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const fadeinTxt = document.getElementById('fadein-txt');
+
+          function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
+
+          function fadeInOnScroll() {
+            if (isInViewport(fadeinTxt)) {
+              fadeinTxt.style.transition = 'opacity 1s';
+              fadeinTxt.style.opacity = 1;
+              window.removeEventListener('scroll', fadeInOnScroll); // Remove the event listener after fade-in
+            }
+          }
+
+          fadeinTxt.style.opacity = 0; // Initially hide the text
+          window.addEventListener('scroll', fadeInOnScroll);
+          fadeInOnScroll(); // Check if the element is already in the viewport on page load
+        });
+
+      </script>
+
+      <!-- cta  -->
+
+      <footer style="color: white;background-color: var(--zarak-blue);z-index: 3;position: relative;">
+        <p><i class="fa-solid fa-location-dot"></i> Ontario Tower - Business Bay - Dubai - UAE</p>
+        &copy; 2024 AI BOT Properties. All rights reserved.
+      </footer>
+
+      <style>
+        footer {
+          background-color: #0C2544;
+          text-align: center;
+          padding: 10px 0;
+          font-weight: 500;
+          /* position: fixed; */
+          bottom: 0;
+          width: 100%;
+          /* box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); */
+          font-size: 14px;
+          color: black;
+        }
+      </style>
+    </div>
+  </main>
+
+
+
+
+  <!-- casestudy slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="js/casestudyslider.js"></script> -->
+
+  <!-- gsap animations -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/scripts.js"></script>
+
+
+  <!-- Texillate.js and Lettering.js -->
+
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script src="assets/textillate/jquery.fittext.js"></script>
+  <script src="assets/textillate/jquery.lettering.js"></script>
+  <script src="assets/textillate/jquery.textillate.js"></script>
+
+  <script src="script.js"></script>
+  <script src="js/cardscript.js"></script>
+
+  <!-- animated heading -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('abc123');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('abc12599');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('abc12');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('abc124');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('abc125');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById('ourpartners');
+
+      function onScroll() {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          heading.classList.add('visible');
+        } else {
+          heading.classList.remove('visible');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll);
+      window.addEventListener('resize', onScroll);
+
+      // Trigger on scroll load
+      onScroll();
+    });
+  </script>
+
+  </script>
+
+
+
+
+  <!-- cursor -->
+  <script>
+    new kursor({
+      type: 1,
+      removeDefaultCursor: true
+    });
+  </script>
+
+  <!-- loader -->
+</body>
+
+</html>

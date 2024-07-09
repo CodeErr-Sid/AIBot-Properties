@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .nvod-bumper {
+            text-align: center;
+            padding: 128px 16px;
+            background-color: #efefef;
+        }
+
+        .nvod-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .nvod-space-holder {
+            position: relative;
+            width: 100%;
+        }
+
+        .nvod-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .nvod-horizontal {
+            position: absolute;
+            height: 100%;
+            will-change: transform;
+        }
+
+        .nvod-cards {
+            position: relative;
+            height: 100%;
+            padding: 0 0 0 150px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .nvod-sample-card {
+            position: relative;
+            height: 300px;
+            width: 500px;
+            background-color: #111f30;
+            margin-right: 75px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="nvod-bumper">
+        <h2>There should be a horizontal scroll area just below</h2>
+    </div>
+
+    <section class="nvod-container">
+        <div class="nvod-space-holder">
+            <div class="nvod-sticky">
+                <div class="nvod-horizontal">
+                    <section role="feed" class="nvod-cards">
+                        <article class="nvod-sample-card"></article>
+                        <article class="nvod-sample-card"></article>
+                        <article class="nvod-sample-card"></article>
+                        <article class="nvod-sample-card"></article>
+                        <article class="nvod-sample-card"></article>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="nvod-bumper">
+        <h2>Scroll up to see a horizontal scroll section</h2>
+    </div>
+    <script>
+        const spaceHolder = document.querySelector('.nvod-space-holder');
+        const horizontal = document.querySelector('.nvod-horizontal');
+        spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+
+        function calcDynamicHeight(ref) {
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            const objectWidth = ref.scrollWidth;
+            return objectWidth - vw + vh + 150; // 150 is the padding (in pixels) desired on the right side of the .nvod-cards container. This can be set to whatever your styles dictate
+        }
+
+        window.addEventListener('scroll', () => {
+            const sticky = document.querySelector('.nvod-sticky');
+            horizontal.style.transform = `translateX(-${sticky.offsetTop}px)`;
+        });
+
+        window.addEventListener('resize', () => {
+            spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+        });
+    </script>
+</body>
+
+</html>

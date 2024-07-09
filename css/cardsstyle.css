@@ -1,0 +1,179 @@
+:root {
+  --zarak-blue: #0C2544;
+}
+
+.cardsection {
+  overflow-x: hidden;
+  /* Ensure horizontal overflow is hidden */
+  margin-bottom: 40px;
+}
+
+.card h2{
+  margin: 1rem 0;
+}
+
+.scroll-container {
+  justify-content: center;
+  display: flex;
+  /* Flex container for cards-i*/
+  /* overflow-x: scroll; Enable horizontal scrolling */
+  /* scroll-snap-type: x mandatory; Snap to each card */
+  /* -webkit-overflow-scrolling: touch; Smooth scrolling on iOS */
+}
+
+.cards-i {
+  display: flex;
+  /* Flex container for cards-i*/
+  cursor: grab;
+  margin: 2vw;
+}
+
+.card-i {
+  flex: 0 0 auto;
+  /* Non-flexible width for each card */
+  margin-right: 20px;
+  /* Margin between cards-i*/
+  scroll-snap-align: start;
+  /* Snap alignment to start */
+  background-color: #fff;
+  padding: 20px;
+  width: 25vw;
+  /* Adjust width as 25% of viewport width */
+  height: 30vw;
+  /* Adjust height as 30% of viewport width */
+  border-radius: 8px;
+  box-shadow: 8px 18px 22px rgba(0, 0, 0, 0.1);
+}
+
+.card-i:last-child {
+  margin-right: 0;
+  /* Remove margin from the last card */
+}
+
+.pro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.proimg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.proimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.protitle {
+  flex: 1;
+}
+
+.proname {
+  font-weight: bold;
+}
+
+.prosubname {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.cardsection p {
+  color: #555;
+  font-size: 1.5vw;
+  font-family: sans-serif;
+}
+
+
+
+.cardsection .btn {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--zarak-blue);
+  color: white;
+  display: block;
+  width: 15%;
+  margin: 0 auto;
+  
+}
+
+.cardsection .btn span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.cardsection .btn:hover span {
+  color: white;
+}
+
+.cardsection .btn::before,
+.cardsection .btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cardsection .btn::before {
+  content: "";
+  background: red;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cardsection .btn:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.sectopn {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* Custom scrollbar for webkit-based browsers */
+.scroll-container::-webkit-scrollbar {
+  height: 2px;
+  /* Horizontal scrollbar height */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom scrollbar for Firefox */
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: #fff #838383
+    /* Firefox scrollbar thumb and track colors */
+}
