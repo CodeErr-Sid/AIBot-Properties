@@ -856,14 +856,23 @@ aside p {
 }
 
 
-@media screen and (0 <= width <= 425px) {
-  .cp-img,
-  .cp-img-2{
-    aspect-ratio: 1/2;
-  }
-}
 
 @media screen and (0 <=width <=768px) {
+
+  .cp-section h4{
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  .cp-section .drb-big,
+  .normal-section .drb-big{
+    font-size: 1.5rem;
+  }
+
+  .normal-section p{
+    font-size: 1.5rem;
+  }
+
   .logo-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -928,5 +937,16 @@ aside p {
   
   .logo-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (0 <= width <= 425px) {
+  .cp-img,
+  .cp-img-2{
+    aspect-ratio: 1/2;
+  }
+
+  .cp-section h4{
+    line-height: 1.2;
   }
 }

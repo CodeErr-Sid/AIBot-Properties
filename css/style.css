@@ -765,6 +765,25 @@ p {
     padding-right: .05em
 }
 
+@media screen and (426px <=width <=768px) {
+    .md-title {
+        font-size: 4rem;
+    }
+
+    .txt-cont {
+        padding-top: 4rem;
+    }
+}
+
+@media screen and (0 <=width <=425px) {
+    .txt-cont{
+        padding-top: 8rem;
+    }
+    .container11{
+        flex-direction: column;
+    }
+}
+
 .caption {
     font-size: 13px;
     line-height: 22px;
@@ -12623,7 +12642,7 @@ body {
 
 }
 
-.box112{
+.box112 {
     transform: scale(0);
     /* backdrop-filter: blur(50px); */
     transition: all 1s ease;
@@ -12644,14 +12663,14 @@ body {
 
 .box11>img {
     width: 80%;
-    
+
     height: auto;
     object-fit: cover;
     transition: .5s;
 }
 
-.box112>img{
-    width:100%;
+.box112>img {
+    width: 100%;
 }
 
 .box11>span {
