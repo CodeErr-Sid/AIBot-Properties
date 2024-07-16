@@ -10351,6 +10351,7 @@ ul.menu.social-menu li a::after {
 }
 
 .nayla-infinite-tabs .tab-title-wrap {
+    overflow: hidden;
     white-space: nowrap;
     list-style: none;
     padding: 0;
