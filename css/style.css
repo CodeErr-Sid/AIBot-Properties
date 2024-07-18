@@ -10365,12 +10365,12 @@ ul.menu.social-menu li a::after {
 
 .nayla-infinite-tabs {
     display: block;
+    overflow: hidden;
     float: left;
     width: 100%
 }
 
 .nayla-infinite-tabs .tab-title-wrap {
-    overflow: hidden;
     white-space: nowrap;
     list-style: none;
     padding: 0;
