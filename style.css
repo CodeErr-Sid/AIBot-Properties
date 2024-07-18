@@ -111,8 +111,17 @@ a {
   font-size: 1rem;
 }
 
-.card h4 {
-  margin: 1em 0;
+.card h2{
+  margin-top: 1em ;
+  margin-bottom: .5em;
+}
+
+.card h2{
+  font-size: 2.5rem;
+}
+
+.card p{
+  font-size: .9rem;
 }
 
 .content-theme-light h4 {
@@ -354,10 +363,8 @@ a {
 }
 
 #cards {
-  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
-  /* Make place at bottom, as items will slide to that position*/
-  margin-bottom: var(--card-margin);
-  /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+  padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position */
+  margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline */
 }
 
 #card_1 {
@@ -378,8 +385,14 @@ a {
 
 .card {
   position: sticky;
-  top: 4rem;
+  top: 10%;
   padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+.card__content {
+  transform-origin: 50% 0%;
+  will-change: transform;
+  transition: transform 1s;
 }
 
 @supports (animation-timeline: works) {
@@ -494,36 +507,93 @@ a {
   color: rgb(10, 5, 7);
   border-radius: 1em;
   overflow: hidden;
-
   display: grid;
   grid-template-areas: "text img";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-
   align-items: stretch;
-  outline: var(--outline-width) solid lime;
 }
 
-.card__content>div {
+.card__content > div {
   grid-area: text;
   width: 80%;
   place-self: center;
   text-align: left;
-
   display: grid;
   gap: 1em;
-  place-items: start;
+  /* place-items: start; */
 }
 
-.card__content>figure {
+.card__content > figure {
   grid-area: img;
   overflow: hidden;
 }
 
-.card__content>figure>img {
+.card__content > figure > img {
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+@media (max-width: 1024px) {
+  :root {
+      --card-height: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+      --card-height: 60vw;
+      --card-margin: 35vw;
+      --card-top-offset: 0.5em;
+  }
+
+  .card__content {
+      grid-template-areas: "img" "text";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+  }
+
+  .card__content > div {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+      --card-height: 70vw;
+      --card-margin: 100vw;
+      --card-top-offset: 0.25em;
+  }
+
+  #card_1{
+      margin-top: 10px;
+  }
+
+  .card__content {
+      grid-template-areas: "img" "text";
+      margin-bottom: 100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+  }
+
+  .card__content > div {
+      width: 100%;
+      text-align: center;
+  }
+
+  .card-content h1 {
+      font-size: 2.5em;
+  }
+
+  .card-content h2 {
+      font-size: 1.5em;
+  }
+
+  .card-content p {
+      font-size: 1em;
+  }
 }
 
 /* h1 {
