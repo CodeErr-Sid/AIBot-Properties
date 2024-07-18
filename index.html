@@ -918,189 +918,6 @@
       </section> -->
 
 
-      <style>
-        .case-study-card {
-          margin: 0 auto;
-          width: 80%;
-          background-color: var(--zarak-blue);
-          height: 80%;
-          border-radius: 1rem;
-          display: flex;
-          justify-content: center;
-          align-content: center;
-        }
-
-        .cs-card-grid-container {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          gap: 1rem;
-          padding: 1rem;
-          width: 100%;
-        }
-
-        .cs-project {
-          grid-area: a;
-        }
-
-        .cs-unit {
-          grid-area: b;
-        }
-
-        .cs-profile-card {
-          grid-area: c;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .cs-purchase {
-          grid-area: d;
-        }
-
-        .cs-resale {
-          grid-area: e;
-        }
-
-        .cs-description {
-          grid-area: f;
-          display: grid;
-          place-content: center;
-        }
-        .cs-description p{
-          margin: 0;
-        }
-
-        .cs-card-grid-container {
-          grid-template-areas:
-            "a b c"
-            "d e c"
-            "f f c";
-        }
-
-        .cs-card-box {
-          background-color: #fff;
-          padding: 10px;
-          font-size: 1.3rem;
-          font-weight: 600;
-
-          text-align: center;
-          border-radius: .9rem;
-        }
-
-        .cs-upper-2 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .cs-upper-2 .cs-u-content {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
-        .cs-name {
-          text-align: left;
-        }
-
-        .cs-lower-2 {
-          flex-direction: column-reverse;
-        }
-
-        .cs-lower-2 .cs-u-content {
-          align-items: flex-end;
-        }
-
-        .cs-p-upper {
-          height: 37%;
-        }
-
-        .cs-p-middle{
-          height: 20%
-        }
-
-        .cs-p-lower {
-          height: 36%;
-          border: 1px solid black;
-        }
-
-        .cs-p-upper{
-          display: flex;
-        }
-
-        .cs-profile-container{
-          display: flex;
-          align-items: flex-end;
-          justify-content: left;
-          gap: 1rem;
-        }
-
-        .cs-profile-container img{
-          width: 20%;
-          position:relative;
-          z-index: 1;
-        }
-
-        .cs-profile-container h5{
-          margin: 0;
-        }
-
-        .cs-p-lower {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: 1rem;
-          border-radius: 1rem;
-        }
-
-        .cs-content-upper {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
-        .cs-content-lower {
-          text-align: right;
-        }
-        .banner-img{
-          clip-path: polygon(0% 2%, 100% 0%, 109% 28%, 0% 83%);
-    position: absolute;
-    width: 100%;
-    top: -5px;
-    right: 0;
-    z-index: 0;
-        }
-
-        .cs-profile-name{
-          gap: 5px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-        }
-
-        .cs-profile-name p{
-          margin: 0;
-          font-size: .9rem;
-          line-height: 0;
-        }
-
-        .cs-p-middle h4{
-          font-weight: 500;
-    margin: 0;
-    text-align: left;
-        }
-
-        .cspm-lower{
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .csp{
-          margin-bottom: 1rem;
-        }
-
-        
-      </style>
-
       <section style="height: 100vh; width: 100%;background-color: var(--zarak-blue);z-index: 3;position: relative;">
         <section style="background-color: white;height: 100%;text-align: center;" class="border-top-radius">
           <div class="fty-carousel" data-flickity='{ "wrapAround": true }'>
@@ -1349,7 +1166,7 @@
                       typesetting industry. Lorem Ipsum has been the industry's
                       standard dummy text ever since the 1500s, when an
                       unknown printer took a galley of”
-                    </p>
+                    </p> 
                   </div>
                 </div>
               </div>
@@ -1368,7 +1185,65 @@
           <h3 id="abc124" style="text-align: center;  font-weight: 800; color: white; text-transform: uppercase;">
             <br>Featured Properties
           </h3>
-          <main class="card-main">
+
+          <div class="fty-carousel" data-flickity='{ "wrapAround": true }'>
+            <main class="fty-carousel-cell card-stack">
+              <li class="card" id="card_1">
+                <div class="card__content">
+                  <div>
+                    <h2>Peace Lagoons</h2>
+                    <p>
+                      Peace Lagoons is an innovative residential project located in Dubai Land Residence Complex,
+                      offering studio, 1, and 2-bedroom apartments. This luxurious complex features unique amenities
+                      such as a lagoon within the apartment area, private pools for each residence, a kids' play area,
+                      volleyball court, gymnasium, yoga area, and a 30,000 sqft shopping mall. Peace Lagoons combines
+                      elegance and modern living, redefining luxury with a 1% monthly payment plan.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/laggon3d.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+            </main>
+            <main class="fty-carousel-cell card-stack">
+              <li class="card" id="card_2">
+                <div class="card__content">
+                  <div>
+                    <h2>Venera at The Valley Phase 2</h2>
+                    <p>Venera at The Valley Phase 2 offers elegantly designed 3 and 4-bedroom townhouses. Located in
+                      Dubai, this development is inspired by nature, featuring rolling hills, lush meadows, and scenic
+                      landscapes. Residents can enjoy amenities like sports courts, kids' play areas, community centers,
+                      and adventure trails. The townhouses are part of a vibrant community that offers a luxury living
+                      experience intertwined with nature, providing a serene yet adventurous lifestyle.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/property360.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+            </main>
+            <main class="fty-carousel-cell card-stack">
+              <li class="card" id="card_3">
+                <div class="card__content">
+                  <div>
+                    <h2>360 Riverside Crescent</h2>
+                    <p>
+                      360 Riverside Crescent is a prestigious 57-story residential development by Sobha Realty located
+                      in Sobha Hartland 2, Meydan, Dubai. It features luxury 1, 1.5, and 2-bedroom apartment. The
+                      project is known for its diamond-shaped architectural design and offers a resort-style living
+                      experience. Amenities include a state-of-the-art infinity pool, jacuzzi, sports facilities like
+                      paddle tennis and squash courts, and sky gardens on the 18th and 43rd floors offering stunning
+                      views. The project is slated for handover in January 2027.</p>
+                  </div>
+                  <figure>
+                    <img src="assets/comp/venera.png" alt="Image description">
+                  </figure>
+                </div>
+              </li>
+            </main>
+          </div>
+
+          <!-- <main class="card-main">
             <ul id="cards">
               <li class="card" id="card_1">
                 <div class="card__content">
@@ -1421,9 +1296,7 @@
 
 
             </ul>
-          </main>
-          <aside>
-          </aside>
+          </main> -->
         </section>
       </section>
       <!-- card stack -->

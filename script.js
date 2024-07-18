@@ -22,20 +22,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('scroll', function() {
-    const cards = document.querySelectorAll('.card__content');
-    const windowHeight = window.innerHeight;
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if (cardTop < windowHeight && cardTop > 0) {
-            card.style.transform = `scale(${1.1 - (cardTop / windowHeight) * 0.1})`;
-        } else if (cardTop <= 0) {
-            card.style.transform = 'scale(1)';
-        } else {
-            card.style.transform = 'scale(1.1)';
-        }
-    });
-});
+// document.addEventListener('scroll', function() {
+//     const cards = document.querySelectorAll('.card__content');
+//     const windowHeight = window.innerHeight;
+//     cards.forEach(card => {
+//         const cardTop = card.getBoundingClientRect().top;
+//         if (cardTop < windowHeight && cardTop > 0) {
+//             card.style.transform = `scale(${1.1 - (cardTop / windowHeight) * 0.1})`;
+//         } else if (cardTop <= 0) {
+//             card.style.transform = 'scale(1)';
+//         } else {
+//             card.style.transform = 'scale(1.1)';
+//         }
+//     });
+// });
 
 
 
