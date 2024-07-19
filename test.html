@@ -3,94 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Office Map</title>
+    <title>Real Estate Referral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
         }
-        .global-office-map {
-            width: 100%;
-            height: 300px;
-            color: #fff;
+        .header-section-sidq1 {
+            background: url('./assets/toggle/secbg.png') ;
+            background-size: contain;
+            height: 30vh; /* adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
             padding: 20px;
             box-sizing: border-box;
-            transition: background 0.3s;
-            background-size: cover;
-            background-position: center;
         }
-        .flag-buttons {
+        .header-section-sidq1 h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .hd-txt-sidq1 {
+            vertical-align: middle;
+            padding-top: 40px;
+        }
+        .steps-section-sidq1 {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .steps-section-sidq1 h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .steps-sidq1 {
             display: flex;
-            gap: 10px;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
-        .flag-button {
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.8);
+        .step-sidq1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+        }
+        .step-sidq1 i {
+            font-size: 3rem;
+            color: #0C2544;
+            margin-bottom: 10px;
+        }
+        .step-sidq1 p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: lightcoral;
+        }
+        @media (max-width: 768px) {
+            .header-section-sidq1 h1 {
+                font-size: 1.5rem;
+            }
+            .step-sidq1 {
+                width: 100px;
+            }
+            .step-sidq1 i {
+                font-size: 2rem;
+            }
+            .step-sidq1 p {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-section-sidq1 {
+                height: auto;
+                padding: 10px;
+            }
+            .header-section-sidq1 h1 {
+                font-size: 1.2rem;
+            }
+            .hd-txt-sidq1 {
+                padding-top: 20px;
+            }
+            .step-sidq1 {
+                width: 80px;
+            }
+            .step-sidq1 i {
+                font-size: 1.5rem;
+            }
+            .step-sidq1 p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <section class="global-office-map">
-        <h1 id="section-title">Global Office Map</h1>
-        <h3 id="section-subtitle">Select a country to view its details</h3>
-        <div class="flag-buttons">
-            <div class="flag-button" data-country="india">🇮🇳 India</div>
-            <div class="flag-button" data-country="usa">🇺🇸 USA</div>
-            <div class="flag-button" data-country="uk">🇬🇧 UK</div>
-            <div class="flag-button" data-country="australia">🇦🇺 Australia</div>
-            <div class="flag-button" data-country="canada">🇨🇦 Canada</div>
+    
+    <div class="header-section-sidq1">
+        <div class="hd-txt-sidq1">
+            <h1>Join Our Real Estate Family</h1>
+            <p>Earn Rewards by referring friends or join Our Network of Experts</p>
         </div>
-    </section>
-    <div id="country-details">
-        <h1 id="country-name">Select a country</h1>
-        <p id="country-address">Address will be displayed here</p>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            const countryDetails = {
-                india: {
-                    name: 'India',
-                    address: '1234 Gandhi Road, New Delhi, India',
-                    background:"url(assets/img/1.png)"
-                },
-                usa: {
-                    name: 'USA',
-                    address: '5678 Lincoln Ave, Washington, USA',
-                    background:"url(assets/img/1.png)"
-                },
-                uk: {
-                    name: 'UK',
-                    address: '1234 Queen Street, London, UK',
-                    background:"url(assets/img/1.png)"
-                },
-                australia: {
-                    name: 'Australia',
-                    address: '5678 Sydney Rd, Sydney, Australia',
-                    background:"url(assets/img/1.png)"
-                },
-                canada: {
-                    name: 'Canada',
-                    address: '1234 Maple Street, Ottawa, Canada',
-                    background:"url(assets/img/1.png)"
-                }
-            };
-
-            $('.flag-button').click(function() {
-                const country = $(this).data('country');
-                const details = countryDetails[country];
-
-                if (details) {
-                    $('.global-office-map').css('background-image', details.background);
-                    $('#country-name').text(details.name);
-                    $('#country-address').text(details.address);
-                }
-            });
-        });
-    </script>
+    <div class="steps-section-sidq1">
+        <h2>A Simple 2 steps to win in Real Estate Game</h2>
+        <div class="steps-sidq1">
+            <div class="step-sidq1">
+                <i class="fas fa-file-alt"></i>
+                <p>Fill the Form</p>
+            </div>
+            <div class="step-sidq1">
+                <i class="fas fa-check-circle"></i>
+                <p>Get Verified</p>
+            </div>
+            <div class="step-sidq1">
+                <i class="fas fa-award"></i>
+                <p>Claim Reward's</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
