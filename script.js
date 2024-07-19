@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // document.addEventListener('scroll', function() {
 //     const cards = document.querySelectorAll('.card__content');
 //     const windowHeight = window.innerHeight;
@@ -600,6 +599,37 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(box);
   });
 });
+// toggle section
+document.getElementById('btn-professional').addEventListener('click', function() {
+  toggleForms('professional');
+});
+
+document.getElementById('btn-individual').addEventListener('click', function() {
+  toggleForms('individual');
+});
+
+function toggleForms(type) {
+  const professionalForm = document.getElementById('form-professional');
+  const individualForm = document.getElementById('form-individual');
+  const professionalText = document.getElementById('text-professional');
+  const individualText = document.getElementById('text-individual');
+
+  if (type === 'professional') {
+      professionalForm.style.display = 'block';
+      individualForm.style.display = 'none';
+      professionalText.style.display = 'block';
+      individualText.style.display = 'none';
+      document.getElementById('btn-professional').classList.add('active-sidq');
+      document.getElementById('btn-individual').classList.remove('active-sidq');
+  } else {
+      individualForm.style.display = 'block';
+      professionalForm.style.display = 'none';
+      individualText.style.display = 'block';
+      professionalText.style.display = 'none';
+      document.getElementById('btn-individual').classList.add('active-sidq');
+      document.getElementById('btn-professional').classList.remove('active-sidq');
+  }
+}
 
 
 

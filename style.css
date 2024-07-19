@@ -1225,3 +1225,236 @@ aside p {
     line-height: 1.2;
   }
 }
+
+/* toggle section */
+.toggle-sidq{
+  background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 90vh; */
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container-left-sidq {
+  display: flex;
+  background: url('assets/toggle/secbg.png') no-repeat bottom ;
+  background-size: cover;
+  background-color: #0C2544;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-sidq {
+  background: url('assets/toggle/secbg.png') no-repeat bottom ;
+  background-size: cover;
+  background-color: #0C2544;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-buttons-sidq {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.toggle-btn-sidq {
+  background: none;
+  /* border: 1px solid #fff; */
+  border-radius: 20px;
+  border-color: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  /* margin-right: 10px; */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn-sidq.active-sidq {
+  background-color: #fff;
+  color: black;
+}
+
+
+.sidebar-item-sidq {
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.sidebar-item-sidq h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: none;
+}
+
+.sidebar-item-sidq p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-container-sidq {
+  padding: 20px;
+  background-color: #fff;
+  width: 400px;
+  box-sizing: border-box;
+}
+
+.form-content-sidq {
+  display: none;
+}
+
+.form-content-sidq.active-sidq {
+  display: block;
+}
+
+.form-group-sidq {
+  margin-bottom: 15px;
+}
+
+.form-group-sidq label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group-sidq input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-container-sidq button {
+  background-color: #0C2544;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.mydetails-sidq{
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+.frddetails-sidq{
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+
+
+/* reward */
+
+.container-reward-sidq {
+  display: flex;
+  align-items: flex-start;
+  /* vertical-align: middle; */
+
+  background-color: transparent;
+  color: gold;
+  /* margin: 30px; */
+}
+.container-reward-sidq img {
+  max-width: 60px; 
+  margin-right: 3px; 
+}
+.text-reward-sidq p{
+font-size: 1rem;
+font-weight: 600;
+}
+.container-reward-sidq .text-reward-sidq {
+  flex-grow: 1;
+  margin-top: 6px;
+}
+
+/* Media Query for Tablets and Mobile Devices */
+@media (max-width: 768px) {
+  body{
+      height: auto;
+  }
+  .container-left-sidq {
+      flex-direction: column;
+      width: 95%;
+      max-width: none;
+      height: auto;
+  }
+
+  .sidebar-sidq, .form-container-sidq {
+      /* width: 100%; */
+  }
+
+  .toggle-buttons-sidq {
+      border: none;
+      /* flex-direction: column; */
+      /* align-items: stretch; */
+  }
+
+  .toggle-btn-sidq {
+      width: 100%;
+      margin-bottom: 10px;
+      border: none;
+  }
+
+  .sidebar-item-sidq {
+      width: auto;
+      margin: 0 0 20px;
+      padding: 15px;
+  }
+
+  .form-container-sidq {
+      padding: 15px;
+  }
+
+  .form-group-sidq input {
+      padding: 10px;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  /* .container-left-sidq {
+      padding: 10px;
+  } */
+
+  .toggle-btn-sidq {
+      font-size: 16px;
+      padding: 8px;
+      border: none;
+  }
+
+  .sidebar-item-sidq {
+      padding: 10px;
+  }
+
+  .form-container-sidq {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .form-group-sidq input {
+      padding: 8px;
+  }
+}
+

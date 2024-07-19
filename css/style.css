@@ -710,7 +710,7 @@ h2,
 h3,
 .text-h3 {
     font-size: 51px;
-    line-height: 62px;
+    /* line-height: 62px; */
     font-weight: 400;
     letter-spacing: -.03em
 }
