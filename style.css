@@ -994,35 +994,35 @@ aside p {
 }
 
 
-@media screen and ( 0 <= width <=424px) {
-  .cs-card-grid-container{
-    grid-template-rows: repeat(11,1fr);
+@media screen and (0 <=width <=424px) {
+  .cs-card-grid-container {
+    grid-template-rows: repeat(11, 1fr);
     grid-template-areas:
-    "c"
-    "c"
-    "c"
-    "c"
-    "c"
-    "c"
-    "a" 
-    "b" 
-    "d" 
-    "e" 
-    "f";
+      "c"
+      "c"
+      "c"
+      "c"
+      "c"
+      "c"
+      "a"
+      "b"
+      "d"
+      "e"
+      "f";
   }
 }
 
-@media screen and ( 425px <= width <=768px) {
+@media screen and (425px <=width <=768px) {
 
-  .cs-card-grid-container{
-    grid-template-rows: repeat(6,1fr);
+  .cs-card-grid-container {
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-    "c c"
-    "c c"
-    "c c"
-    "a b"
-    "d e"
-    "f f";
+      "c c"
+      "c c"
+      "c c"
+      "a b"
+      "d e"
+      "f f";
   }
 }
 
@@ -1104,23 +1104,25 @@ aside p {
   font-size: 1rem;
 }
 
-.cs-coin{
-  position:absolute;
+.cs-coin {
+  position: absolute;
   transform: rotate(45deg);
 }
 
-.cs-coin-2{
+.cs-coin-2 {
   width: 25%;
   top: 30%;
   left: -14%;
 
 }
-.cs-coin-1{
+
+.cs-coin-1 {
   width: 16%;
   bottom: -11%;
   left: 16%;
 }
-.cs-coin-3{
+
+.cs-coin-3 {
   bottom: -18%;
   right: 25%;
   width: 19%;
@@ -1138,11 +1140,11 @@ aside p {
 }
 
 
-.cs-p-img{
+.cs-p-img {
   z-index: 1;
-    background: black;
-    border-radius: 4rem;
-    display: inline;
+  background: black;
+  border-radius: 4rem;
+  display: inline;
 }
 
 .cs-profile-container img {
@@ -1266,7 +1268,7 @@ aside p {
 }
 
 @media screen and (426px <=width <=768px) {
-  
+
 
 
   .cp-section h4 {
@@ -1343,9 +1345,11 @@ aside p {
 
 .container-left-sidq {
   display: flex;
-  width: 70%; /* Increased width */
-  min-height: 70vh; /* Increased height */
-  background: url('assets/toggle/secbg.png')  bottom ;
+  width: 70%;
+  /* Increased width */
+  min-height: 70vh;
+  /* Increased height */
+  background: url('assets/toggle/secbg.png') bottom;
   background-size: cover;
   background-color: #0C2544;
   border-radius: 10px;
@@ -1354,7 +1358,7 @@ aside p {
 }
 
 .sidebar-sidq {
-  background: url('assets/toggle/secbg.png')  bottom;
+  background: url('assets/toggle/secbg.png') bottom;
   background-size: cover;
   background-color: #0C2544;
   padding: 20px;
@@ -1362,7 +1366,8 @@ aside p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1; /* Added flex property to scale */
+  flex: 1;
+  /* Added flex property to scale */
 }
 
 .toggle-buttons-sidq {
@@ -1383,7 +1388,8 @@ aside p {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  flex: 1; /* Added flex property to scale */
+  flex: 1;
+  /* Added flex property to scale */
 }
 
 .toggle-btn-sidq.active-sidq {
@@ -1413,9 +1419,11 @@ aside p {
 .form-container-sidq {
   padding: 20px;
   background-color: #fff;
-  width: 50%; /* Adjusted width */
+  width: 50%;
+  /* Adjusted width */
   box-sizing: border-box;
-  flex: 1; /* Added flex property to scale */
+  flex: 1;
+  /* Added flex property to scale */
 }
 
 .form-content-sidq {
@@ -1496,8 +1504,9 @@ aside p {
 /* Media Query for Tablets and Mobile Devices */
 @media (max-width: 768px) {
   body {
-      height: auto;
+    height: auto;
   }
+
   .container-left-sidq {
     flex-direction: column;
     width: 95%;
@@ -1505,12 +1514,13 @@ aside p {
     height: auto;
   }
 
-  .sidebar-sidq, .form-container-sidq {
-      width: 100%;
+  .sidebar-sidq,
+  .form-container-sidq {
+    width: 100%;
   }
 
   .toggle-buttons-sidq {
-      border: none;
+    border: none;
   }
 
   .toggle-btn-sidq {
@@ -1561,10 +1571,11 @@ aside p {
 .header-section-sidq1 {
   background: url('./assets/toggle/secbg.png');
   background-size: contain;
-  height: 35vh; /* adjust as needed */
+  height: 35vh;
+  /* adjust as needed */
   display: flex;
   border-top-left-radius: 50px;
-  border-top-right-radius: 50px ;
+  border-top-right-radius: 50px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1636,11 +1647,14 @@ aside p {
   .step-sidq1 p {
     font-size: 0.9rem;
   }
-  #sidebar-correction{
+
+  #sidebar-correction {
     width: 100%;
   }
 }
+
 @media (max-width: 480px) {
+
   .header-section-sidq1 {
     height: auto;
     padding: 10px;
@@ -1665,12 +1679,13 @@ aside p {
   .step-sidq1 p {
     font-size: 0.8rem;
   }
-  #sidebar-correction{
+
+  #sidebar-correction {
     width: 100%;
   }
 }
 
-/* btn */ 
+/* btn */
 .Btnz {
   width: 220px;
   height: 70px;
@@ -1703,4 +1718,20 @@ aside p {
   transition-duration: .5s;
   animation: gradient .5s ease infinite;
   background-position: right;
+}
+
+
+@media screen and (max-width: 600px){
+  .fty-container{
+    margin-top: -350px;
+  }
+
+  #sidxali{
+    margin-top: -350px;
+  }
+
+  .flickity-prev-next-button{
+    top: 20%!important;
+  }
+
 }
