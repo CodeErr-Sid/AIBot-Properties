@@ -905,6 +905,13 @@ aside p {
   transform: revert-layer;
 }
 
+@media screen and (max-width:768px) {
+  #case-study-cs .flickity-viewport{
+    height: 200vh!important;
+  }
+}
+
+
 
 /* ' */
 
@@ -1133,12 +1140,20 @@ aside p {
   display: flex;
   align-items: flex-end;
   justify-content: left;
-  gap: 1rem;
+  gap: 2.5rem;
+}
+
+
+.cs-p-img{
+  z-index: 1;
+    background: black;
+    border-radius: 4rem;
+    display: inline;
 }
 
 .cs-profile-container img {
-  width: 20%;
   position: relative;
+  filter: invert(1);
   z-index: 1;
 }
 
@@ -1168,7 +1183,7 @@ aside p {
   clip-path: polygon(0% 2%, 100% 0%, 130% 28%, 0% 113%);
   position: absolute;
   width: 100%;
-  top: 0%;
+  top: -5%;
   right: 0;
   z-index: 0;
 }
@@ -1667,13 +1682,15 @@ aside p {
   height: 70px;
   border: none;
   border-radius: 40px;
-  background: linear-gradient(to right,#bf953f,#fcf6ba,#b38728,#fbf5b7,#aa771c);
+  background: red;
+  /* background: linear-gradient(to right,#bf953f,#fcf6ba,#b38728,#fbf5b7,#aa771c); */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: 0.8em;
-  color: rgb(121, 103, 3);
+  /* color: rgb(121, 103, 3); */
+  color: rgb(255, 255, 255);
   font-weight: 600;
   cursor: pointer;
   position: relative;
