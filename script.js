@@ -510,6 +510,9 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function() {
   var flkty = new Flickity('.fty-carousel', {
     wrapAround: true,
+    contain: true,
+    resize:true,
+    cellAlign:'center',
     // Add other options as needed
   });
 
