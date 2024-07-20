@@ -1013,10 +1013,8 @@ aside p {
 @media screen and ( 425px <= width <=768px) {
 
   .cs-card-grid-container{
-    grid-template-rows: repeat(8,1fr);
+    grid-template-rows: repeat(6,1fr);
     grid-template-areas:
-    "c c"
-    "c c"
     "c c"
     "c c"
     "c c"
@@ -1035,7 +1033,7 @@ aside p {
   font-weight: 600;
   text-align: center;
   border-radius: .9rem;
-  gap: 2rem;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1101,6 +1099,7 @@ aside p {
   border: 1px solid black;
   position: relative;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 .cs-coin{
@@ -1168,7 +1167,7 @@ aside p {
   clip-path: polygon(0% 2%, 100% 0%, 130% 28%, 0% 113%);
   position: absolute;
   width: 100%;
-  top: -5px;
+  top: 0%;
   right: 0;
   z-index: 0;
 }
