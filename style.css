@@ -1691,7 +1691,7 @@ aside p {
   height: 70px;
   border: none;
   border-radius: 40px;
-  background: red;
+  background: white;
   /* background: linear-gradient(to right,#bf953f,#fcf6ba,#b38728,#fbf5b7,#aa771c); */
   display: flex;
   align-items: center;
@@ -1699,7 +1699,7 @@ aside p {
   gap: 8px;
   font-size: 0.8em;
   /* color: rgb(121, 103, 3); */
-  color: rgb(255, 255, 255);
+  color: var(--zarak-blue);
   font-weight: 600;
   cursor: pointer;
   position: relative;
@@ -1730,8 +1730,8 @@ aside p {
     margin-top: -350px;
   }
 
-  .flickity-prev-next-button{
-    top: 20%!important;
+  .cs-study-cs .flickity-prev-next-button{
+    display: none;
   }
 
 }
