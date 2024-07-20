@@ -594,9 +594,7 @@ document.addEventListener("DOMContentLoaded", function() {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
               entry.target.classList.add('scale-up');
-          } else {
-              entry.target.classList.remove('scale-up');
-          }
+          } 
       });
   }, { threshold: 0.5 });
 
