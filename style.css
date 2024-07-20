@@ -905,12 +905,6 @@ aside p {
   transform: revert-layer;
 }
 
-@media screen and (max-width:768px) {
-  #case-study-cs .flickity-viewport{
-    height: 200vh!important;
-  }
-}
-
 
 
 /* ' */

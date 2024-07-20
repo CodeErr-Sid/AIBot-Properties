@@ -634,6 +634,41 @@ function toggleForms(type) {
   }
 }
 
+$(document).ready(function() {
+  function updateViewportHeight() {
+    var viewport = $('#case-study-cs .flickity-viewport');
+    var caseStudyCard = $('.fty-carousel-cell.is-selected .case-study-card');
+    
+    // Check viewport width
+    if ($(window).width() < 768) {
+      // Get the height of the selected case study card
+      var cardHeight = caseStudyCard.outerHeight();
+      
+      // Calculate the new viewport height (adding 3 rem extra)
+      var newViewportHeight = cardHeight + parseFloat($('html').css('font-size')) * 3; // Assuming 1 rem = font-size in pixels
+      
+      // Set the viewport height
+      viewport.height(newViewportHeight);
+    } else {
+      // Reset to initial height for larger viewports
+      viewport.css('height', '574px'); // Or any other initial height value
+    }
+  }
+
+  // Update height on document ready
+  updateViewportHeight();
+
+  // Update height on Flickity change events
+  $('.flickity-viewport').on('select.flickity', function() {
+    updateViewportHeight();
+  });
+
+  // Update height on window resize
+  $(window).resize(function() {
+    updateViewportHeight();
+  });
+});
+
 
 
 
