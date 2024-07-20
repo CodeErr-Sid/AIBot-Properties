@@ -1335,13 +1335,13 @@ aside p {
 .container-left-sidq {
   display: flex;
   width: 70%; /* Increased width */
-  height: 70vh; /* Increased height */
+  min-height: 70vh; /* Increased height */
   background: url('assets/toggle/secbg.png')  bottom ;
   background-size: cover;
   background-color: #0C2544;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-sidq {
@@ -1548,9 +1548,7 @@ aside p {
 }
 
 /*  */
-#sidebar-correction{
-  width: 134%;
-}
+
 .header-section-sidq1 {
   background: url('./assets/toggle/secbg.png');
   background-size: contain;
