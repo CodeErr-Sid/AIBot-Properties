@@ -1240,7 +1240,9 @@ aside p {
 
 .container-left-sidq {
   display: flex;
-  background: url('assets/toggle/secbg.png') no-repeat bottom ;
+  width: 70%; /* Increased width */
+  height: 70vh; /* Increased height */
+  background: url('assets/toggle/secbg.png')  bottom ;
   background-size: cover;
   background-color: #0C2544;
   border-radius: 10px;
@@ -1249,7 +1251,7 @@ aside p {
 }
 
 .sidebar-sidq {
-  background: url('assets/toggle/secbg.png') no-repeat bottom ;
+  background: url('assets/toggle/secbg.png')  bottom;
   background-size: cover;
   background-color: #0C2544;
   padding: 20px;
@@ -1257,6 +1259,7 @@ aside p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1; /* Added flex property to scale */
 }
 
 .toggle-buttons-sidq {
@@ -1266,19 +1269,18 @@ aside p {
   border-radius: 20px;
   text-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .toggle-btn-sidq {
   background: none;
-  /* border: 1px solid #fff; */
   border-radius: 20px;
-  border-color: none;
   color: #fff;
   font-size: 18px;
   padding: 10px 20px;
   cursor: pointer;
-  /* margin-right: 10px; */
   transition: background-color 0.3s, color 0.3s;
+  flex: 1; /* Added flex property to scale */
 }
 
 .toggle-btn-sidq.active-sidq {
@@ -1286,20 +1288,18 @@ aside p {
   color: black;
 }
 
-
 .sidebar-item-sidq {
   margin-bottom: 20px;
   background-color: #fff;
   color: black;
   border-radius: 10px;
   padding: 20px;
-  width: 300px;
+  width: 100%;
 }
 
 .sidebar-item-sidq h3 {
   margin: 0 0 10px;
   font-size: 16px;
-  line-height: none;
 }
 
 .sidebar-item-sidq p {
@@ -1310,8 +1310,9 @@ aside p {
 .form-container-sidq {
   padding: 20px;
   background-color: #fff;
-  width: 400px;
+  width: 50%; /* Adjusted width */
   box-sizing: border-box;
+  flex: 1; /* Added flex property to scale */
 }
 
 .form-content-sidq {
@@ -1348,52 +1349,53 @@ aside p {
   cursor: pointer;
   width: 100%;
   font-size: 16px;
+  margin-top: 25px;
 }
 
-.mydetails-sidq{
+.mydetails-sidq {
   border-radius: 10px;
   border: 1px solid;
   padding: 10px;
   margin-bottom: 4px;
 }
-.frddetails-sidq{
+
+.frddetails-sidq {
   border-radius: 10px;
   border: 1px solid;
   padding: 10px;
   margin-bottom: 4px;
 }
-
-
 
 /* reward */
 
 .container-reward-sidq {
   display: flex;
-  align-items: flex-start;
-  /* vertical-align: middle; */
-
+  align-items: center;
   background-color: transparent;
   color: gold;
-  /* margin: 30px; */
+  margin: 30px;
 }
+
 .container-reward-sidq img {
-  max-width: 60px; 
-  margin-right: 3px; 
+  max-width: 100px;
+  margin-right: 20px;
 }
-.text-reward-sidq p{
-font-size: 1rem;
-font-weight: 600;
+
+.text-reward-sidq p {
+  font-size: 1rem;
+  font-weight: 600;
 }
+
 .container-reward-sidq .text-reward-sidq {
   flex-grow: 1;
-  margin-top: 6px;
 }
 
 /* Media Query for Tablets and Mobile Devices */
 @media (max-width: 768px) {
-  body{
+  body {
       height: auto;
   }
+
   .container-left-sidq {
       flex-direction: column;
       width: 95%;
@@ -1402,13 +1404,11 @@ font-weight: 600;
   }
 
   .sidebar-sidq, .form-container-sidq {
-      /* width: 100%; */
+      width: 100%;
   }
 
   .toggle-buttons-sidq {
       border: none;
-      /* flex-direction: column; */
-      /* align-items: stretch; */
   }
 
   .toggle-btn-sidq {
@@ -1434,10 +1434,6 @@ font-weight: 600;
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  /* .container-left-sidq {
-      padding: 10px;
-  } */
-
   .toggle-btn-sidq {
       font-size: 16px;
       padding: 8px;
@@ -1457,12 +1453,18 @@ font-weight: 600;
       padding: 8px;
   }
 }
+
 /*  */
+#sidebar-correction{
+  width: 134%;
+}
 .header-section-sidq1 {
   background: url('./assets/toggle/secbg.png') ;
   background-size: contain;
-  height: 30vh; /* adjust as needed */
+  height: 35vh; /* adjust as needed */
   display: flex;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px ;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1522,6 +1524,9 @@ font-weight: 600;
   .step-sidq1 p {
       font-size: 0.9rem;
   }
+  #sidebar-correction{
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .header-section-sidq1 {
@@ -1542,5 +1547,8 @@ font-weight: 600;
   }
   .step-sidq1 p {
       font-size: 0.8rem;
+  }
+  #sidebar-correction{
+    width: 100%;
   }
 }
