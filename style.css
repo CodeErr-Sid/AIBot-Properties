@@ -1010,6 +1010,7 @@ aside p {
     "f";
   }
 }
+
 @media screen and ( 425px <= width <=768px) {
 
   .cs-card-grid-container{

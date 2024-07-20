@@ -513,6 +513,8 @@ document.addEventListener('DOMContentLoaded', function() {
     contain: true,
     resize:true,
     cellAlign:'center',
+    fullscreen:true,
+    adaptiveHeight:true
     // Add other options as needed
   });
 
