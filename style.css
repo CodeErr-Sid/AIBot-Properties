@@ -1241,7 +1241,7 @@ aside p {
   }
 
   .mobile-card img{
-    width: 60%;
+    width: 80%;
     border: 2px solid #0b2443;
     border-radius: 1rem;
     border-top: 11px solid #0b2443;
@@ -1748,11 +1748,11 @@ aside p {
 
 @media screen and (max-width: 600px){
   .fty-container{
-    margin-top: -350px;
+    margin-top: -395px;
   }
 
   #sidxali{
-    margin-top: -350px;
+    margin-top: -395px;
   }
 
   .flickity-prev-next-button{
