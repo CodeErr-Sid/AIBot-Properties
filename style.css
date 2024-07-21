@@ -1144,7 +1144,7 @@ aside p {
 .cs-p-img {
   width: 35%;
   z-index: 1;
-  background: black;
+  background: var(--zarak-blue);
   border-radius: 4rem;
   display: inline;
 }
