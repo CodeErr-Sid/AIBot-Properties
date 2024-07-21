@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.nava');
+  const navLinks = document.querySelectorAll('index.html.nava');
 
   navLinks.forEach(function(navLink) {
     navLink.addEventListener('click', function(event) {
@@ -514,7 +514,8 @@ document.addEventListener('DOMContentLoaded', function() {
     resize:true,
     cellAlign:'center',
     fullscreen:true,
-    adaptiveHeight:true
+    adaptiveHeight:true,
+    pageDots:false,
     // Add other options as needed
   });
 
