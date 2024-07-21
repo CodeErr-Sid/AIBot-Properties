@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Real Estate | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+    <style>
+        .logo {
+            position: absolute;
+            left: 20px;
+            width: 7rem;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .nav-links{
+            margin: 0;
+        }
+
+
+        .nav-links:hover .nava i{
+            padding-left: 10px;
+        }
+
+    </style>
+
+    <!-- navbar -->
+    <nav class="navbar" style="position: fixed;">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="logo" />
+            <!-- <a href="">Real Estate</a> -->
+        </div>
+        <ul class="nav-links">
+            <li><a class="nava" href="/index.html">Back to Home <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+    </nav>
+    <script>
+        $('.nava').click(function(){
+            window.location.href="index.html"
+        })
+    </script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const navbar = document.querySelector('.navbar');
+
+          window.addEventListener('scroll', function () {
+            if (window.scrollY === 0) {
+              navbar.classList.add('transparent');
+              navbar.classList.remove('bg-white');
+            } else {
+              navbar.classList.remove('transparent');
+              navbar.classList.add('bg-white');
+            }
+          });
+
+          // Initial check
+          if (window.scrollY === 0) {
+            navbar.classList.add('transparent');
+          } else {
+            navbar.classList.add('white-background');
+          }
+        });
+
+      </script> -->
+
+    <!-- navbar -->
+    <!-- toggle section -->
+    <div class="whtspace z-index-section" style="position: relative; background-color: white;">
+        <section class="toggle-top z-index-section" style=" position: relative;">
+
+            <div class="header-section-sidq1">
+                <div class="hd-txt-sidq1">
+                    <h1 style="font-weight: 700;">Join Our Real Estate Family</h1>
+                    <p>Earn Rewards by referring friends or join Our Network of Experts</p>
+                </div>
+            </div>
+
+            <div class="steps-section-sidq1">
+                <h2>A Simple 2 steps to win in Real Estate Game</h2>
+                <div class="steps-sidq1">
+                    <div class="step-sidq1">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Share your contact</p>
+                    </div>
+                    <div class="step-sidq1">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Follow the process</p>
+                    </div>
+                    <div class="step-sidq1">
+                        <i class="fas fa-award"></i>
+                        <p>Get Rewarded</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <section class="toggle-sidq z-index-section" style=" position: relative;">
+        <div class="container-left-sidq z-index-section">
+
+
+            <div class="sidebar-sidq">
+                <div class="toggle-buttons-sidq">
+                    <button id="btn-professional" class="toggle-btn-sidq active-sidq">Professional</button>
+                    <button id="btn-individual" class="toggle-btn-sidq">Individual</button>
+                </div>
+
+
+                <div class="sidebar-content-sidq">
+                    <div class="text-div-sidq" id="text-professional">
+                        <div class="sidebar-item-sidq" id="sidebar-correction">
+                            <h3 style="font-weight: 600;">Book for an Intro Call</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="sidebar-item-sidq" id="sidebar-correction">
+                            <h3>Leverage your Business with Dubai Real Estate Opportunities</h3>
+                        </div>
+                    </div>
+
+
+                    <!--  -->
+
+
+                    <div class="text-div-sidq" id="text-individual" style="display: none;">
+                        <div class="sidebar-item-sidq">
+                            <h3>Optimize your Network and Get Reward</h3>
+                        </div>
+                        <div class="sidebar-item-sidq">
+                            <h3>You must know a friend who is looking to invest into real estate. Share his details and
+                                Get
+                                Rewarded!</h3>
+                        </div>
+
+                        <div class="container-reward-sidq">
+                            <img src="assets/toggle/reward_coin.png" alt="Reward Coin Image">
+                            <div class="text-reward-sidq">
+                                <p>Stand a chance<br>to win upto 50,000AED !</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-container-sidq">
+                <div id="form-professional" class="form-content-sidq active-sidq">
+                    <form>
+                        <div class="form-group-sidq">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="form-group-sidq">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group-sidq">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone">
+                        </div>
+                        <div class="form-group-sidq">
+                            <label for="title">Professional Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                        <div class="form-group-sidq">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group-sidq">
+                            <label for="industry">Industry</label>
+                            <input type="text" id="industry" name="industry">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="form-individual" class="form-content-sidq" style="display: none;">
+                    <form>
+                        <h4 style="padding-top: 25px;">My Details</h4>
+                        <div class="mydetails-sidq">
+                            <div class="form-group-sidq">
+                                <label for="iname">Name</label>
+                                <input type="text" id="iname" name="iname">
+                            </div>
+                            <div class="form-group-sidq">
+                                <label for="iemail">Email</label>
+                                <input type="email" id="iemail" name="iemail">
+                            </div>
+                            <div class="form-group-sidq">
+                                <label for="iphone">Phone Number</label>
+                                <input type="text" id="iphone" name="iphone">
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <h4 style="padding-top: 35px;">My Friend Details</h4>
+                        <div class="frddetails-sidq">
+                            <div class="form-group-sidq">
+                                <label for="fname">Name</label>
+                                <input type="text" id="fname" name="fname">
+                            </div>
+                            <div class="form-group-sidq">
+                                <label for="femail">Email</label>
+                                <input type="email" id="femail" name="femail">
+                            </div>
+                            <div class="form-group-sidq">
+                                <label for="fphone">Phone Number</label>
+                                <input type="text" id="fphone" name="fphone">
+                            </div>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- toggle section -->
+
+    <footer style="color: white;background-color: var(--zarak-blue);z-index: 3;position: relative;">
+        <p><i class="fa-solid fa-location-dot"></i> Ontario Tower - Business Bay - Dubai - UAE</p>
+        &copy; 2024 AI BOT Properties. All rights reserved.
+    </footer>
+
+    <style>
+        footer {
+            background-color: #0C2544;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 500;
+            /* position: fixed; */
+            bottom: 0;
+            width: 100%;
+            /* box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); */
+            font-size: 14px;
+            color: black;
+        }
+
+        .header-section-sidq1 {
+            height: 50vh;
+            border-radius: 0;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
