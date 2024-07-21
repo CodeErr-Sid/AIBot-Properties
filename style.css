@@ -1223,10 +1223,31 @@ aside p {
 /* case study slider */
 
 
+.pc-card{
+  display: block;
+}
 
+.mobile-card{
+  display: none;
+}
 
 
 @media screen and (0 <=width <=768px) {
+
+  .mobile-card{
+    display: block;
+  }
+
+  .mobile-card img{
+    width: 60%;
+    border: 2px solid #0b2443;
+    border-radius: 1rem;
+    border-top: 11px solid #0b2443;
+  }
+
+  .pc-card{
+    display: none;
+  }
 
   .cp-section h4 {
     font-size: 1.2em;
@@ -1721,6 +1742,8 @@ aside p {
 }
 
 
+
+
 @media screen and (max-width: 600px){
   .fty-container{
     margin-top: -350px;
@@ -1730,8 +1753,10 @@ aside p {
     margin-top: -350px;
   }
 
-  .cs-study-cs .flickity-prev-next-button{
+  .flickity-prev-next-button{
     display: none;
   }
 
 }
+
+

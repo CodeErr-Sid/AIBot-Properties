@@ -995,7 +995,7 @@
       Real
       Success
     </h3>
-          <div class="fty-carousel" data-flickity='{ "wrapAround": true, "adaptiveHeight": true }'>
+          <div class="fty-carousel pc-card" data-flickity='{ "wrapAround": true, "adaptiveHeight": true }'>
             <main class="fty-carousel-cell">
               <div class="case-study-card">
                 <div class="cs-card-grid-container">
@@ -1261,6 +1261,18 @@
               </div>
             </main>
           </div>
+
+           <div class="fty-carousel mobile-card" data-flickity='{ "wrapAround": true, "adaptiveHeight": true }'>
+            <div class="fty-carousel-cell">
+              <img src="assets/comp/cs-uk.jpg" alt="">
+            </div>
+            <div class="fty-carousel-cell">
+              <img src="assets/comp/cs-india.jpg" alt="">
+            </div>
+            <div class="fty-carousel-cell">
+              <img src="assets/comp/cs-france.jpg" alt="">
+            </div>
+           </div>
         </section>
       </section>
 
@@ -1475,7 +1487,7 @@
         }
 
         .flag-button.active {
-          border-color: red;
+          border-color: var(--zarak-blue)
         }
 
         .gc-email,
@@ -1494,6 +1506,18 @@
         .gc-dynamic p,
         .gc-dynamic h5 {
           margin: 0;
+        }
+
+        @media screen and ( 0 <= width < 768px) {
+          .global-container{
+            background-image: none!important;
+            text-align: center;
+          }
+
+          .gc-dynamic{
+            align-items: center;
+            width: 100%;
+          }
         }
 
         @media screen and (0 <=width <=425px) {
@@ -1526,7 +1550,7 @@
             <div class="gc-dynamic">
               <h5 class="gc-country-name">Dubai</h5>
               <div class="gc-address">
-                <p>Address</p>
+                <p>AI Bot Properties,Ontario Tower Business Bay, Dubai, UAE</p>
               </div>
               <div class="gc-email">
                 <i class="fa-regular fa-envelope"></i>
@@ -1534,7 +1558,7 @@
               </div>
               <div class="gc-phone-number">
                 <i class="fa-brands fa-whatsapp"></i>
-                <p>Phone Number</p>
+                <p>+971-58-599-7430</p>
               </div>
             </div>
           </div>
@@ -2250,32 +2274,28 @@
       const cityDetails = {
         dubai: {
           name: 'Dubai',
-          address: '123 Sheikh Zayed Road, Dubai, UAE',
-          phone: '+971 4 123 4567',
+          address: 'AI Bot Properties,Ontario Tower Business Bay, Dubai, UAE',
+          phone: '+971-58-599-7430',
           background: 'url(assets/country/DUBAI.jpg)'
         },
         paris: {
           name: 'Paris',
-          address: '456 Champs-Élysées, Paris, France',
-          phone: '+33 1 2345 6789',
+          phone:'Message us',
           background: 'url(assets/country/FRANCE.jpg)'
         },
         geneva: {
           name: 'Geneva',
-          address: '789 Rue du Rhône, Geneva, Switzerland',
-          phone: '+41 22 123 4567',
+          phone:'Message us',
           background: 'url(assets/country/Switzerland.jpg)'
         },
         rabat: {
           name: 'Rabat',
-          address: '1011 Avenue Mohammed V, Rabat, Morocco',
-          phone: '+212 537 123 456',
+          phone:'Message us',
           background: 'url(assets/country/Morocco.jpg)'
         },
         delhi: {
-          name: 'Delhi',
-          address: '44A/76 Mosque Street, Arakkonam, Ranipet District, Tamil Nadu, India - 631-001',
-          phone: '+91 950-035-7386',
+          name: 'New Delhi',
+          phone:'Message us',
           background: 'url(assets/country/INDIA.jpg)'
         }
       };
@@ -2287,7 +2307,12 @@
         if (details) {
           $('.global-container').css('background-image', details.background);
           $('.gc-country-name').html(details.name);
-          $('.gc-address p').html(details.address);
+          if(details.address){
+            $('.gc-address p').html(details.address);
+            $('.gc-address').show()
+          }else{
+            $('.gc-address').hide()
+          }
           $('.gc-phone-number p').html(details.phone);
 
           // Remove the active class from all buttons

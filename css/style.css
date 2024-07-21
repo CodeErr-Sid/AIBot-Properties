@@ -12630,7 +12630,7 @@ body {
     gap: 2em;
     padding: 2em 0;
     box-sizing: border-box;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .box11 {
