@@ -10384,19 +10384,21 @@ ul.menu.social-menu li a::after {
     overflow: hidden;
     padding-bottom: 0;
     opacity: .05;
-    -webkit-transition: opacity .4s ease-out;
-    -o-transition: opacity .4s ease-out;
-    transition: opacity .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color:gray;
     line-height: 1.2
 }
 
 .nayla-infinite-tabs .tab-title.active {
-    opacity: 1
+    opacity: 1;
+    color:white
 }
 
 .nayla-infinite-tabs .tab-contents-wrap {
