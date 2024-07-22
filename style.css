@@ -1136,13 +1136,14 @@ aside p {
 .cs-profile-container {
   display: flex;
   align-items: flex-end;
-  justify-content: left;
+  justify-content: space-between;
   gap: 2.5rem;
+  width: 100%;
 }
 
 
 .cs-p-img {
-  width: 35%;
+  /* width: 35%; */
   z-index: 1;
   background: var(--zarak-blue);
   border-radius: 4rem;
