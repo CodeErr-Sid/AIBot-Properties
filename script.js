@@ -637,7 +637,7 @@ function toggleForms(type) {
 
 $(document).ready(function() {
   function updateViewportHeight() {
-    var viewport = $('#case-study-cs .flickity-viewport');
+    var viewport = $('#db-testimonials .flickity-viewport');
     var caseStudyCard = $('.fty-carousel-cell.is-selected .case-study-card');
     
     // Check viewport width
