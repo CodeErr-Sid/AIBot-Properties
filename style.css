@@ -1031,7 +1031,7 @@ aside p {
 .cs-card-box {
   background-color: #fff;
   padding: 10px;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   font-weight: 600;
   text-align: center;
   border-radius: .9rem;
@@ -1196,14 +1196,15 @@ aside p {
 .cs-p-middle p {
   margin: 0;
   font-size: .9rem;
-  line-height: 0;
+  /* line-height: 0; */
   text-align: left;
 }
 
 .cs-p-middle h5 {
-  font-weight: 500;
-  margin: 0;
-  text-align: left;
+  font-weight: 800;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .cspm p {
