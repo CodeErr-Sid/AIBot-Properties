@@ -21,57 +21,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// document.addEventListener('scroll', function() {
-//     const cards = document.querySelectorAll('.card__content');
-//     const windowHeight = window.innerHeight;
-//     cards.forEach(card => {
-//         const cardTop = card.getBoundingClientRect().top;
-//         if (cardTop < windowHeight && cardTop > 0) {
-//             card.style.transform = `scale(${1.1 - (cardTop / windowHeight) * 0.1})`;
-//         } else if (cardTop <= 0) {
-//             card.style.transform = 'scale(1)';
-//         } else {
-//             card.style.transform = 'scale(1.1)';
-//         }
-//     });
-// });
+
+const img = document.querySelector('.cp-img')
+window.addEventListener('scroll', () => {
+  const current = window.scrollY;
+  img.style.clipPath = `circle(${current}px at center)`
+})
 
 
 
-// //navbar hover effects
-// $(document).ready(function () {
-//     $(".hover-effect").each(function () {
-//       var element = $(this);
+// navbar script
 
-//       element.textillate({
-//         in: {
-//           effect: "fadeInUp",
-//           sequence: true,
-//           speed: 1000,
-//           delayScale: 0.5,
-//         },
-//         out: {
-//           effect: "fadeInDown",
-//           sequence: true,
-//           speed: 1000,
-//           delayScale: 0.5,
-//         },
-//         loop: false,
-//       });
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.querySelector('.navbar');
 
-//       // Hover event
-//       element.hover(
-//         function () {
-//           element.textillate("in");
-//         },
-//         function () {
-//           element.textillate("out");
-//         }
-//       );
-//     });
-//   });
+  window.addEventListener('scroll', function () {
+    if (window.scrollY === 0) {
+      navbar.classList.add('transparent');
+      navbar.classList.remove('bg-white');
+    } else {
+      navbar.classList.remove('transparent');
+      navbar.classList.add('bg-white');
+    }
+  });
 
-// typewriter effect
+  // Initial check
+  if (window.scrollY === 0) {
+    navbar.classList.add('transparent');
+  } else {
+    navbar.classList.add('white-background');
+  }
+});
+
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const text = "SECURE YOUR FUTURE";
@@ -670,6 +651,125 @@ $(document).ready(function() {
   });
 });
 
+
+// cta section p tag script 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var target = document.getElementById("my_text");
+
+  function revealOnScroll() {
+    var rect = target.getBoundingClientRect();
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+      target.classList.add("reveal");
+      // Remove the event listener after the element is revealed to improve performance
+      window.removeEventListener("scroll", revealOnScroll);
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  // Check if the element is already in view (in case the user starts in the middle of the page)
+  revealOnScroll();
+});
+
+
+// cursor script
+
+new kursor({
+  type: 1,
+  removeDefaultCursor: true
+});
+
+// global office map section
+
+$(document).ready(function () {
+  const cityDetails = {
+    dubai: {
+      name: 'Dubai',
+      address: '<b>AI Bot Properties</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
+      phone: '+971-58-599-7430',
+      background: 'url(assets/country/DUBAI.jpg)'
+    },
+    paris: {
+      name: 'Paris',
+      phone:'Message us',
+      background: 'url(assets/country/FRANCE.jpg)'
+    },
+    geneva: {
+      name: 'Geneva',
+      phone:'Message us',
+      background: 'url(assets/country/Switzerland.jpg)'
+    },
+    rabat: {
+      name: 'Rabat',
+      phone:'Message us',
+      background: 'url(assets/country/Morocco.jpg)'
+    },
+    delhi: {
+      name: 'New Delhi',
+      phone:'Message us',
+      background: 'url(assets/country/INDIA.jpg)'
+    }
+  };
+
+  $('.flag-button').click(function () {
+    const country = $(this).data('country');
+    const details = cityDetails[country];
+
+    if (details) {
+      $('.global-container').css('background-image', details.background);
+      $('.gc-country-name').html(details.name);
+      if(details.address){
+        $('.gc-address p').html(details.address);
+        $('.gc-address').show();
+      }
+      else{
+        $('.gc-address').hide()
+      }
+      $('.gc-phone-number p').html(details.phone);
+
+      // Remove the active class from all buttons
+      $('.flag-button').removeClass('active');
+      // Add the active class to the clicked button
+      $(this).addClass('active');
+    }
+  });
+
+  $('.gc-phone-number').click(function(){
+    window.location.href = "https://wa.me/971585997430"
+  })
+});
+
+// clip path animation
+
+
+// video element 
+
+const video = document.getElementById('video');
+        const playPauseButton = document.getElementById('playPauseButton');
+
+        playPauseButton.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+            playPauseButton.classList.remove('play');
+            playPauseButton.classList.add('pause');
+          } else {
+            video.pause();
+            playPauseButton.classList.remove('pause');
+            playPauseButton.classList.add('play');
+          }
+        });
+
+        video.addEventListener('play', () => {
+          playPauseButton.classList.remove('play');
+          playPauseButton.classList.add('pause');
+        });
+
+        video.addEventListener('pause', () => {
+          playPauseButton.classList.remove('pause');
+          playPauseButton.classList.add('play');
+        });
 
 
 
