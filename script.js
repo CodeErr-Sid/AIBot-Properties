@@ -453,41 +453,6 @@ $(document).ready(function () {
 
 });
 
-// new vs old dubai
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   var flkty = new Flickity('.fty-carousel', {
-//     wrapAround: true,
-//     // Add other options as needed
-//   });
-
-//   flkty.on('select', function () {
-//     // Get the currently selected carousel cell
-//     var selectedCell = flkty.selectedElement;
-
-//     // Get the container and slider within the selected carousel cell
-//     var container = selectedCell.querySelector('.fty-container');
-//     var slider = selectedCell.querySelector('.fty-slider');
-
-//     // Add input event listener to the slider within the selected carousel cell
-//     slider.addEventListener('input', function (e) {
-//       var value = e.target.value;
-//       container.style.setProperty('--position', `${value}%`);
-//     });
-//   });
-
-//   // Initial setup when the page loads
-//   var initialSelectedCell = flkty.selectedElement;
-//   var initialContainer = initialSelectedCell.querySelector('.fty-container');
-//   var initialSlider = initialSelectedCell.querySelector('.fty-slider');
-
-//   // Add input event listener to the slider within the initially selected carousel cell
-//   initialSlider.addEventListener('input', function (e) {
-//     var value = e.target.value;
-//     initialContainer.style.setProperty('--position', `${value}%`);
-//   });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
   var flkty = new Flickity('.fty-carousel', {
     wrapAround: true,
