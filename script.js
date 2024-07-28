@@ -309,67 +309,67 @@ $(document).ready(function () {
     setTimeout(function(){
       loader.style.display = "none";
       
-      $(document).ready(function () {
-        // Initialize textillate for each section
-        $('.drb-left').textillate({
-            autoStart: true,
-            in: { effect: 'fadeInLeft', delay: 0 }
-        });
+    //   $(document).ready(function () {
+    //     // Initialize textillate for each section
+    //     $('.drb-left').textillate({
+    //         autoStart: true,
+    //         in: { effect: 'fadeInLeft', delay: 0 }
+    //     });
 
         
 
-        $('.drb-tlt').textillate({
-            autoStart: false,
-            in: { effect: 'fadeIn' },
-            delay:10
-        });
+    //     $('.drb-tlt').textillate({
+    //         autoStart: false,
+    //         in: { effect: 'fadeIn' },
+    //         delay:10
+    //     });
 
-        $('.drb-main-after').textillate({
-            autoStart: false,
-            in: { effect: 'fadeIn' },
-            delay:10
-        });
+    //     $('.drb-main-after').textillate({
+    //         autoStart: false,
+    //         in: { effect: 'fadeIn' },
+    //         delay:10
+    //     });
 
-        $('.drb-right').textillate({
-            autoStart: false,
-            in: { effect: 'fadeInRight' },
-            reverse:true
-        });
+    //     $('.drb-right').textillate({
+    //         autoStart: false,
+    //         in: { effect: 'fadeInRight' },
+    //         reverse:true
+    //     });
 
-        $('.author-name').textillate({
-            autoStart: false,
-            type:'word',
-            in: { effect: 'fadeInUp' },
-            sync:true
-        });
+    //     $('.author-name').textillate({
+    //         autoStart: false,
+    //         type:'word',
+    //         in: { effect: 'fadeInUp' },
+    //         sync:true
+    //     });
 
-        $('.author-post').textillate({
-            autoStart: false,
-            type:'word',
-            in: { effect: 'fadeInUp' },
-            sync:true
-        });
+    //     $('.author-post').textillate({
+    //         autoStart: false,
+    //         type:'word',
+    //         in: { effect: 'fadeInUp' },
+    //         sync:true
+    //     });
 
-        // Start animations sequentially
-        setTimeout(function() {
-            $('.drb-tlt').textillate('start');
-        }, 1000);
-        setTimeout(function() {
-            $('.drb-main-after').textillate('start');
-        }, 11000);
-        setTimeout(function() {
-            $('.drb-right').textillate('start');
-        }, 12000);
+    //     // Start animations sequentially
+    //     setTimeout(function() {
+    //         $('.drb-tlt').textillate('start');
+    //     }, 1000);
+    //     setTimeout(function() {
+    //         $('.drb-main-after').textillate('start');
+    //     }, 11000);
+    //     setTimeout(function() {
+    //         $('.drb-right').textillate('start');
+    //     }, 12000);
 
-        setTimeout(function() {
-            $('.author-name').textillate('start');
-        }, 13000); // Adjust timing to match the fadeInUp animation
+    //     setTimeout(function() {
+    //         $('.author-name').textillate('start');
+    //     }, 13000); // Adjust timing to match the fadeInUp animation
 
-        setTimeout(function() {
-            $('.author-post').textillate('start');
-        }, 14000); // Adjust timing to match the fadeInUp animation
+    //     setTimeout(function() {
+    //         $('.author-post').textillate('start');
+    //     }, 14000); // Adjust timing to match the fadeInUp animation
        
-    });
+    // });
   });
   });
 
