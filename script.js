@@ -28,6 +28,65 @@ window.addEventListener('scroll', () => {
   img.style.clipPath = `circle(${current}px at center)`
 })
 
+// global office map section
+
+$(document).ready(function () {
+  const cityDetails = {
+    dubai: {
+      name: 'Dubai',
+      address: '<b>AI Bot Properties</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
+      phone: '+971-58-599-7430',
+      background: 'url(assets/country/DUBAI.jpg)'
+    },
+    paris: {
+      name: 'Paris',
+      phone:'Message us',
+      background: 'url(assets/country/FRANCE.jpg)'
+    },
+    geneva: {
+      name: 'Geneva',
+      phone:'Message us',
+      background: 'url(assets/country/Switzerland.jpg)'
+    },
+    rabat: {
+      name: 'Rabat',
+      phone:'Message us',
+      background: 'url(assets/country/Morocco.jpg)'
+    },
+    delhi: {
+      name: 'New Delhi',
+      phone:'Message us',
+      background: 'url(assets/country/INDIA.jpg)'
+    }
+  };
+
+  $('.flag-button').click(function () {
+    const country = $(this).data('country');
+    const details = cityDetails[country];
+
+    if (details) {
+      $('.global-container').css('background-image', details.background);
+      $('.gc-country-name').html(details.name);
+      if(details.address){
+        $('.gc-address p').html(details.address);
+        $('.gc-address').show();
+      }
+      else{
+        $('.gc-address').hide()
+      }
+      $('.gc-phone-number p').html(details.phone);
+
+      // Remove the active class from all buttons
+      $('.flag-button').removeClass('active');
+      // Add the active class to the clicked button
+      $(this).addClass('active');
+    }
+  });
+
+  $('.gc-phone-number').click(function(){
+    window.location.href = "https://wa.me/971585997430"
+  })
+});
 
 
 // navbar script
@@ -647,65 +706,7 @@ new kursor({
   removeDefaultCursor: true
 });
 
-// global office map section
 
-$(document).ready(function () {
-  const cityDetails = {
-    dubai: {
-      name: 'Dubai',
-      address: '<b>AI Bot Properties</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
-      phone: '+971-58-599-7430',
-      background: 'url(assets/country/DUBAI.jpg)'
-    },
-    paris: {
-      name: 'Paris',
-      phone:'Message us',
-      background: 'url(assets/country/FRANCE.jpg)'
-    },
-    geneva: {
-      name: 'Geneva',
-      phone:'Message us',
-      background: 'url(assets/country/Switzerland.jpg)'
-    },
-    rabat: {
-      name: 'Rabat',
-      phone:'Message us',
-      background: 'url(assets/country/Morocco.jpg)'
-    },
-    delhi: {
-      name: 'New Delhi',
-      phone:'Message us',
-      background: 'url(assets/country/INDIA.jpg)'
-    }
-  };
-
-  $('.flag-button').click(function () {
-    const country = $(this).data('country');
-    const details = cityDetails[country];
-
-    if (details) {
-      $('.global-container').css('background-image', details.background);
-      $('.gc-country-name').html(details.name);
-      if(details.address){
-        $('.gc-address p').html(details.address);
-        $('.gc-address').show();
-      }
-      else{
-        $('.gc-address').hide()
-      }
-      $('.gc-phone-number p').html(details.phone);
-
-      // Remove the active class from all buttons
-      $('.flag-button').removeClass('active');
-      // Add the active class to the clicked button
-      $(this).addClass('active');
-    }
-  });
-
-  $('.gc-phone-number').click(function(){
-    window.location.href = "https://wa.me/971585997430"
-  })
-});
 
 // clip path animation
 
