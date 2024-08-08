@@ -40,22 +40,22 @@ $(document).ready(function () {
     },
     paris: {
       name: 'Paris',
-      phone:'Message us',
+      phone: 'Message us',
       background: 'url(assets/country/FRANCE.jpg)'
     },
     geneva: {
       name: 'Geneva',
-      phone:'Message us',
+      phone: 'Message us',
       background: 'url(assets/country/Switzerland.jpg)'
     },
     rabat: {
       name: 'Rabat',
-      phone:'Message us',
+      phone: '+212-666-64-30-30',
       background: 'url(assets/country/Morocco.jpg)'
     },
     delhi: {
       name: 'New Delhi',
-      phone:'Message us',
+      phone: 'Message us',
       background: 'url(assets/country/INDIA.jpg)'
     }
   };
@@ -67,12 +67,11 @@ $(document).ready(function () {
     if (details) {
       $('.global-container').css('background-image', details.background);
       $('.gc-country-name').html(details.name);
-      if(details.address){
+      if (details.address) {
         $('.gc-address p').html(details.address);
         $('.gc-address').show();
-      }
-      else{
-        $('.gc-address').hide()
+      } else {
+        $('.gc-address').hide();
       }
       $('.gc-phone-number p').html(details.phone);
 
@@ -83,10 +82,20 @@ $(document).ready(function () {
     }
   });
 
-  $('.gc-phone-number').click(function(){
-    window.location.href = "https://wa.me/971585997430"
-  })
+  $('.gc-phone-number').click(function () {
+    const phoneNumber = $('.gc-phone-number p').html().trim();
+
+    // Check if the phone number is "Message us"
+    if (phoneNumber === 'Message us') {
+      window.location.href = `https://wa.me/971585997430`
+    } else {
+      // Extract digits from the phone number and open WhatsApp
+      const formattedNumber = phoneNumber.replace(/\D/g, '');
+      window.location.href = `https://wa.me/${formattedNumber}`;
+    }
+  });
 });
+
 
 $("#getfreeconsult").click(function() {
   $('html, body').animate({
