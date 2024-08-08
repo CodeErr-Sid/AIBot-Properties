@@ -50,7 +50,7 @@ $(document).ready(function () {
     },
     rabat: {
       name: 'Rabat',
-      address: '<b>KH REALTY</b>,<br>Mrs. Khaoula Meynaoui',
+      address: '<b>KH REALTY</b>,<br>Mrs. Khaoula MEYNAOUI',
       phone: '+212-666-64-30-30',
       background: 'url(assets/country/Morocco.jpg)'
     },
