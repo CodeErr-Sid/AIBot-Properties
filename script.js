@@ -102,6 +102,12 @@ $("#getfreeconsult").click(function() {
   }, 1000); // Adjust the duration (1000 milliseconds) as needed
 });
 
+$("#featuredcontact").click(function() {
+  $('html, body').animate({
+      scrollTop: $("#db-contact").offset().top
+  }, 1000); // Adjust the duration (1000 milliseconds) as needed
+});
+
 
 // navbar script
 
