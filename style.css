@@ -1905,6 +1905,7 @@ footer {
 .flag-buttons {
   display: flex;
   gap: 15px;
+  margin-bottom: .9rem;
 }
 
 .flag-button {

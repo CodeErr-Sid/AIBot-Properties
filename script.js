@@ -33,25 +33,25 @@ window.addEventListener('scroll', () => {
 $(document).ready(function () {
   const cityDetails = {
     dubai: {
-      name: 'Dubai',
+      name: '<b>DUBAI<b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
       phone: '+971-58-599-7430',
       background: 'url(assets/country/DUBAI.jpg)'
     },
     paris: {
-      name: 'Paris',
+      name: '<b>PARIS<b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr.Bachir BOUSSEBISSI',
       phone: '+33-6-14-74-81-44',
       background: 'url(assets/country/FRANCE.jpg)'
     },
     geneva: {
-      name: 'Geneva',
+      name: '<b>GENEVA<b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Mrs. Hayat JMAMMOU',
       phone: '+41-79-636-14-79',
       background: 'url(assets/country/Switzerland.jpg)'
     },
     rabat: {
-      name: 'Rabat',
+      name: '<b>RABAT<b>',
       address: '<b>KH REALTY</b><br>Mrs. Khaoula MEYNAOUI',
       phone: '+212-666-64-30-30',
       background: 'url(assets/country/Morocco.jpg)'
