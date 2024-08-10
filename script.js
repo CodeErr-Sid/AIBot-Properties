@@ -56,6 +56,12 @@ $(document).ready(function () {
       phone: '+212-666-64-30-30',
       background: 'url(assets/country/Morocco.jpg)'
     },
+    cis: {
+      name: '<b>CIS<b>',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mrs. Leyla RASULZADE<br>Executive Partner for Azerbaijan, Georgia & CIS	',
+      phone: '+994-503014553',
+      background: 'url(assets/country/white.jpeg)' 
+    },
   };
 
   $('.flag-button').click(function () {
