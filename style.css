@@ -1940,6 +1940,13 @@ footer {
   margin-bottom: 1rem;
 }
 
+.black-box-ai {
+  border: 2px solid black;
+  padding: 2px;
+  border-radius: 7px;
+  /* font-size: 1rem; */
+}
+
 .flag-button.active {
   border-color: var(--zarak-blue)
 }

@@ -34,31 +34,28 @@ $(document).ready(function () {
   const cityDetails = {
     dubai: {
       name: 'Dubai',
-      address: '<b>AI Bot Properties</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
       phone: '+971-58-599-7430',
       background: 'url(assets/country/DUBAI.jpg)'
     },
     paris: {
       name: 'Paris',
-      phone: 'Message us',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr.Bachir BOUSSEBISSI',
+      phone: '+33-6-14-74-81-44',
       background: 'url(assets/country/FRANCE.jpg)'
     },
     geneva: {
       name: 'Geneva',
-      phone: 'Message us',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Mrs. Hayat JMAMMOU',
+      phone: '+41-79-636-14-79',
       background: 'url(assets/country/Switzerland.jpg)'
     },
     rabat: {
       name: 'Rabat',
-      address: '<b>KH REALTY</b>,<br>Mrs. Khaoula MEYNAOUI',
+      address: '<b>KH REALTY</b><br>Mrs. Khaoula MEYNAOUI',
       phone: '+212-666-64-30-30',
       background: 'url(assets/country/Morocco.jpg)'
     },
-    delhi: {
-      name: 'New Delhi',
-      phone: 'Message us',
-      background: 'url(assets/country/INDIA.jpg)'
-    }
   };
 
   $('.flag-button').click(function () {
@@ -83,18 +80,19 @@ $(document).ready(function () {
     }
   });
 
-  $('.gc-phone-number').click(function () {
+$('.gc-phone-number').click(function () {
     const phoneNumber = $('.gc-phone-number p').html().trim();
 
     // Check if the phone number is "Message us"
     if (phoneNumber === 'Message us') {
-      window.location.href = `https://wa.me/971585997430`
+        window.open('https://wa.me/971585997430', '_blank');
     } else {
-      // Extract digits from the phone number and open WhatsApp
-      const formattedNumber = phoneNumber.replace(/\D/g, '');
-      window.location.href = `https://wa.me/${formattedNumber}`;
+        // Extract digits from the phone number and open WhatsApp
+        const formattedNumber = phoneNumber.replace(/\D/g, '');
+        window.open(`https://wa.me/${formattedNumber}`, '_blank');
     }
-  });
+});
+
 });
 
 
