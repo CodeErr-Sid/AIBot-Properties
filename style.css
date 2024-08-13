@@ -700,6 +700,12 @@ aside p {
   opacity: 0;
 }
 
+@media screen and (width <= 768px){
+  #playPauseButton{
+    display: none;
+  }
+}
+
 
 
 
