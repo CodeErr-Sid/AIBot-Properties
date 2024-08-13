@@ -651,7 +651,6 @@ aside p {
   margin: 0;
   position: relative;
   width: 100%;
-  height: 90vh;
   padding: 2em;
   /* border-radius: 20px; */
   background-color: white;
@@ -688,6 +687,21 @@ aside p {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+#playPauseButton {
+  transition: opacity 0.5s ease; /* Adjust the duration and easing as needed */
+}
+
+#playPauseButton.play {
+  opacity: 1;
+}
+
+#playPauseButton.pause {
+  opacity: 0;
+}
+
+
+
 
 .play-pause-button:hover {
   background-color: rgba(255, 255, 255, 0.9);

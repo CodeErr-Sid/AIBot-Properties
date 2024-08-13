@@ -21,6 +21,31 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const video = document.getElementById('video');
+const playPauseButton = document.getElementById('playPauseButton');
+
+playPauseButton.addEventListener('click', () => {
+  if (video.paused) {
+    video.play();
+    playPauseButton.classList.remove('play');
+    playPauseButton.classList.add('pause');
+  } else {
+    video.pause();
+    playPauseButton.classList.remove('pause');
+    playPauseButton.classList.add('play');
+  }
+});
+
+video.addEventListener('play', () => {
+  playPauseButton.classList.remove('play');
+  playPauseButton.classList.add('pause');
+});
+
+video.addEventListener('pause', () => {
+  playPauseButton.classList.remove('pause');
+  playPauseButton.classList.add('play');
+});
+
 
 const img = document.querySelector('.cp-img')
 window.addEventListener('scroll', () => {
@@ -739,30 +764,7 @@ new kursor({
 
 // video element 
 
-const video = document.getElementById('video');
-        const playPauseButton = document.getElementById('playPauseButton');
 
-        playPauseButton.addEventListener('click', () => {
-          if (video.paused) {
-            video.play();
-            playPauseButton.classList.remove('play');
-            playPauseButton.classList.add('pause');
-          } else {
-            video.pause();
-            playPauseButton.classList.remove('pause');
-            playPauseButton.classList.add('play');
-          }
-        });
-
-        video.addEventListener('play', () => {
-          playPauseButton.classList.remove('play');
-          playPauseButton.classList.add('pause');
-        });
-
-        video.addEventListener('pause', () => {
-          playPauseButton.classList.remove('pause');
-          playPauseButton.classList.add('play');
-        });
 
 
 
