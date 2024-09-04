@@ -71,8 +71,8 @@ $(document).ready(function () {
     },
     geneva: {
       name: '<b>GENEVA<b>',
-      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Mrs. Hayat JMAMMOU',
-      phone: '+41-79-636-14-79',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Mr. Laurent Paul ALTERESCO',
+      phone: '+212-666-64-30-30',
       background: 'url(assets/country/Switzerland.jpg)'
     },
     rabat: {
