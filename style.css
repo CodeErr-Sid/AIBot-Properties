@@ -1961,6 +1961,12 @@ footer {
   margin-bottom: 1rem;
 }
 
+.gc-phone-container{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .black-box-ai {
   border: 2px solid black;
   padding: 2px;

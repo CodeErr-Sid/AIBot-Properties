@@ -1,16 +1,16 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('index.html.nava');
 
-  navLinks.forEach(function(navLink) {
-    navLink.addEventListener('click', function(event) {
+  navLinks.forEach(function (navLink) {
+    navLink.addEventListener('click', function (event) {
       event.preventDefault();
       const targetId = this.getAttribute('href'); // Get target section ID
       const targetSection = document.querySelector(targetId); // Find target section
 
       if (targetSection) {
         const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
-        
+
         // Smooth scroll to the target section
         window.scrollTo({
           top: offsetTop - 80, // Adjusted for fixed header if present
@@ -58,35 +58,41 @@ window.addEventListener('scroll', () => {
 $(document).ready(function () {
   const cityDetails = {
     dubai: {
-      name: '<b>DUBAI<b>',
+      name: '<b>DUBAI</b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Ontario Tower <br> Business Bay, Dubai, UAE',
-      phone: '+971-58-599-7430',
+      phones: ['+971-58-599-7430'],
       background: 'url(assets/country/DUBAI.jpg)'
     },
     paris: {
-      name: '<b>PARIS<b>',
+      name: '<b>PARIS</b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr.Bachir BOUSSEBISSI',
-      phone: '+33-6-14-74-81-44',
+      phones: ['+33-6-14-74-81-44'],
       background: 'url(assets/country/FRANCE.jpg)'
     },
     geneva: {
-      name: '<b>GENEVA<b>',
+      name: '<b>GENEVA</b>',
       address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b>,<br>Mr. Laurent Paul ALTERESCO',
-      phone: '+212-666-64-30-30',
+      phones: ['+212-666-64-30-30'],
       background: 'url(assets/country/Switzerland.jpg)'
     },
     rabat: {
-      name: '<b>RABAT<b>',
+      name: '<b>RABAT</b>',
       address: '<b>KH REALTY</b><br>Mrs. Khaoula MEYNAOUI',
-      phone: '+212-666-64-30-30',
+      phones: ['+212-666-64-30-30'],
       background: 'url(assets/country/Morocco.jpg)'
     },
     cis: {
-      name: '<b>CIS<b>',
-      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mrs. Leyla RASULZADE<br>Executive Partner for Azerbaijan, Georgia & CIS	',
-      phone: '+994-503014553',
-      background: 'url(assets/country/white.jpeg)' 
+      name: '<b>CIS</b>',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mrs. Leyla RASULZADE<br>Executive Partner for Azerbaijan, Georgia & CIS',
+      phones: ['+994-503014553'],
+      background: 'url(assets/country/white.jpeg)'
     },
+    westafrica: {
+      name: '<b>WEST AFRICA</b>',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Baba DIA<br>Executive Partner for West Africa, Abidjan & Ivory Coast',
+      phones: ['+225-07-47-26-37-01', '+33-7-8380-88-46'],
+      background: 'url(assets/country/white.jpeg)'
+    }
   };
 
   $('.flag-button').click(function () {
@@ -96,13 +102,27 @@ $(document).ready(function () {
     if (details) {
       $('.global-container').css('background-image', details.background);
       $('.gc-country-name').html(details.name);
+
       if (details.address) {
         $('.gc-address p').html(details.address);
         $('.gc-address').show();
       } else {
         $('.gc-address').hide();
       }
-      $('.gc-phone-number p').html(details.phone);
+
+      // Clear previous phone numbers
+      $('.gc-phone-container').empty();
+
+      // Dynamically insert each phone number with a unique ID
+      details.phones.forEach((phone, index) => {
+        const phoneDiv = $(`
+          <div class="gc-phone-number" id="phone-${index}">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>${phone}</p>
+          </div>
+        `);
+        $('.gc-phone-container').append(phoneDiv);
+      });
 
       // Remove the active class from all buttons
       $('.flag-button').removeClass('active');
@@ -111,31 +131,24 @@ $(document).ready(function () {
     }
   });
 
-$('.gc-phone-number').click(function () {
-    const phoneNumber = $('.gc-phone-number p').html().trim();
-
-    // Check if the phone number is "Message us"
-    if (phoneNumber === 'Message us') {
-        window.open('https://wa.me/971585997430', '_blank');
-    } else {
-        // Extract digits from the phone number and open WhatsApp
-        const formattedNumber = phoneNumber.replace(/\D/g, '');
-        window.open(`https://wa.me/${formattedNumber}`, '_blank');
-    }
-});
-
+  // WhatsApp click event for dynamically created phone numbers
+  $(document).on('click', '.gc-phone-number', function () {
+    const phoneNumber = $(this).find('p').html().trim();
+    const formattedNumber = phoneNumber.replace(/\D/g, ''); // Remove all non-numeric characters
+    window.open(`https://wa.me/${formattedNumber}`, '_blank');
+  });
 });
 
 
-$("#getfreeconsult").click(function() {
+$("#getfreeconsult").click(function () {
   $('html, body').animate({
-      scrollTop: $("#db-contact").offset().top
+    scrollTop: $("#db-contact").offset().top
   }, 1000); // Adjust the duration (1000 milliseconds) as needed
 });
 
-$("#featuredcontact").click(function() {
+$("#featuredcontact").click(function () {
   $('html, body').animate({
-      scrollTop: $("#db-contact").offset().top
+    scrollTop: $("#db-contact").offset().top
   }, 1000); // Adjust the duration (1000 milliseconds) as needed
 });
 
@@ -165,55 +178,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    const text = "SECURE YOUR FUTURE";
-    let index = 0;
-    const speed = 100; // Speed in milliseconds
-    const delay = 2000; // Delay in milliseconds when the full text is typed
-    let isDeleting = false;
+  const text = "SECURE YOUR FUTURE";
+  let index = 0;
+  const speed = 100; // Speed in milliseconds
+  const delay = 2000; // Delay in milliseconds when the full text is typed
+  let isDeleting = false;
 
-    function typeWriter() {
-        const typewriterElement = document.querySelector(".typewriter-effect");
-
-        if (!isDeleting && index < text.length) {
-            // Typing the text
-            typewriterElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, speed);
-        } 
-        // else if (isDeleting && index > 0) {
-        //     // Deleting the text
-        //     typewriterElement.textContent = text.substring(0, index - 1);
-        //     index--;
-        //     setTimeout(typeWriter, speed);
-        // } else if (index === text.length) {
-        //     // Full text typed, start deleting after delay
-        //     isDeleting = true;
-        //     setTimeout(typeWriter, delay);
-        // } 
-        // else if (index === 0) {
-        //     // All text deleted, start typing again
-        //     isDeleting = false;
-        //     setTimeout(typeWriter, speed);
-        // }
-    }
-
-    // Intersection Observer setup
-    const options = {
-        threshold: 0.5 // Trigger animation when 50% of the element is in view
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                typeWriter(); // Start typewriter effect when in view
-                observer.unobserve(entry.target); // Stop observing once animation starts
-            }
-        });
-    }, options);
-
-    // Start observing the typewriter element
+  function typeWriter() {
     const typewriterElement = document.querySelector(".typewriter-effect");
-    observer.observe(typewriterElement);
+
+    if (!isDeleting && index < text.length) {
+      // Typing the text
+      typewriterElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    }
+    // else if (isDeleting && index > 0) {
+    //     // Deleting the text
+    //     typewriterElement.textContent = text.substring(0, index - 1);
+    //     index--;
+    //     setTimeout(typeWriter, speed);
+    // } else if (index === text.length) {
+    //     // Full text typed, start deleting after delay
+    //     isDeleting = true;
+    //     setTimeout(typeWriter, delay);
+    // } 
+    // else if (index === 0) {
+    //     // All text deleted, start typing again
+    //     isDeleting = false;
+    //     setTimeout(typeWriter, speed);
+    // }
+  }
+
+  // Intersection Observer setup
+  const options = {
+    threshold: 0.5 // Trigger animation when 50% of the element is in view
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        typeWriter(); // Start typewriter effect when in view
+        observer.unobserve(entry.target); // Stop observing once animation starts
+      }
+    });
+  }, options);
+
+  // Start observing the typewriter element
+  const typewriterElement = document.querySelector(".typewriter-effect");
+  observer.observe(typewriterElement);
 });
 
 
@@ -415,78 +428,78 @@ $(document).ready(function () {
 
   var loader = document.getElementById("sidloader");
 
-  window.addEventListener("load", function(){
-    setTimeout(function(){
+  window.addEventListener("load", function () {
+    setTimeout(function () {
       loader.style.display = "none";
-      
+
       $(document).ready(function () {
         // Initialize textillate for each section
         $('.drb-left').textillate({
-            autoStart: true,
-            in: { effect: 'fadeInLeft', delay: 0 }
+          autoStart: true,
+          in: { effect: 'fadeInLeft', delay: 0 }
         });
 
-        
+
 
         $('.drb-tlt').textillate({
-            autoStart: false,
-            in: { effect: 'fadeIn' },
-            delay:10
+          autoStart: false,
+          in: { effect: 'fadeIn' },
+          delay: 10
         });
 
         $('.drb-main-after').textillate({
-            autoStart: false,
-            in: { effect: 'fadeIn' },
-            delay:10
+          autoStart: false,
+          in: { effect: 'fadeIn' },
+          delay: 10
         });
 
         $('.drb-right').textillate({
-            autoStart: false,
-            in: { effect: 'fadeInRight' },
-            reverse:true
+          autoStart: false,
+          in: { effect: 'fadeInRight' },
+          reverse: true
         });
 
         $('.author-name').textillate({
-            autoStart: false,
-            type:'word',
-            in: { effect: 'fadeInUp' },
-            sync:true
+          autoStart: false,
+          type: 'word',
+          in: { effect: 'fadeInUp' },
+          sync: true
         });
 
         $('.author-post').textillate({
-            autoStart: false,
-            type:'word',
-            in: { effect: 'fadeInUp' },
-            sync:true
+          autoStart: false,
+          type: 'word',
+          in: { effect: 'fadeInUp' },
+          sync: true
         });
 
         // Start animations sequentially
-        setTimeout(function() {
-            $('.drb-tlt').textillate('start');
+        setTimeout(function () {
+          $('.drb-tlt').textillate('start');
         }, 1000);
-        setTimeout(function() {
-            $('.drb-main-after').textillate('start');
+        setTimeout(function () {
+          $('.drb-main-after').textillate('start');
         }, 11000);
-        setTimeout(function() {
-            $('.drb-right').textillate('start');
+        setTimeout(function () {
+          $('.drb-right').textillate('start');
         }, 12000);
 
-        setTimeout(function() {
-            $('.author-name').textillate('start');
+        setTimeout(function () {
+          $('.author-name').textillate('start');
         }, 13000); // Adjust timing to match the fadeInUp animation
 
-        setTimeout(function() {
-            $('.author-post').textillate('start');
+        setTimeout(function () {
+          $('.author-post').textillate('start');
         }, 14000); // Adjust timing to match the fadeInUp animation
-       
+
+      });
+
     });
-  
-  });
   });
 
 
 
-  
+
 
   (function () {
     var $slides = document.querySelectorAll('.slide');
@@ -494,35 +507,35 @@ $(document).ready(function () {
     var numOfSlides = $slides.length;
     var slidingAT = 1300; // sync this with scss variable
     var slidingBlocked = false;
-  
+
     // Assign unique classes and data-slide attributes to each slide
     [].slice.call($slides).forEach(function ($el, index) {
       var i = index + 1;
       $el.classList.add('slide-' + i);
       $el.dataset.slide = i;
     });
-  
+
     // Add click event listeners to controls
     [].slice.call($controls).forEach(function ($el) {
       $el.addEventListener('click', controlClickHandler);
     });
-  
+
     function controlClickHandler() {
       if (slidingBlocked) return;
       slidingBlocked = true;
-  
+
       var $control = this;
       var isRight = $control.classList.contains('m--right');
       var $curActive = document.querySelector('.slide.s--active');
       var index = +$curActive.dataset.slide;
-      
+
       // Determine next slide index
       if (isRight) {
         index++;
       } else {
         index--;
       }
-  
+
       // Handle edge cases for index wrapping
       if (index < 1) {
         index = numOfSlides;
@@ -530,15 +543,15 @@ $(document).ready(function () {
       if (index > numOfSlides) {
         index = 1;
       }
-      
+
       // Select the next active slide
       var $newActive = document.querySelector('.slide-' + index);
-  
+
       // Apply CSS classes for active and previous slides
       $control.classList.add('a--rotation');
       $curActive.classList.remove('s--active');
       document.querySelector('.slide.s--prev').classList.remove('s--prev');
-      
+
       // Set timeout to handle class changes after animation
       setTimeout(function () {
         $curActive.classList.remove('s--active-prev');
@@ -552,7 +565,7 @@ $(document).ready(function () {
         }
         document.querySelector('.slide-' + prevIndex).classList.add('s--prev');
       }, slidingAT * 0.25);
-  
+
       // Reset slidingBlocked after animation time
       setTimeout(function () {
         $control.classList.remove('a--rotation');
@@ -560,36 +573,36 @@ $(document).ready(function () {
       }, slidingAT * 0.75);
     };
   }());
-  
+
 
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var flkty = new Flickity('.fty-carousel', {
     wrapAround: true,
     contain: true,
-    resize:true,
-    cellAlign:'center',
-    fullscreen:true,
-    adaptiveHeight:true,
-    pageDots:false,
+    resize: true,
+    cellAlign: 'center',
+    fullscreen: true,
+    adaptiveHeight: true,
+    pageDots: false,
     // Add other options as needed
   });
 
-  flkty.on('select', function() {
+  flkty.on('select', function () {
     // Reset listeners for all cells
-    flkty.cells.forEach(function(cell) {
+    flkty.cells.forEach(function (cell) {
       resetListeners(cell.element);
     });
 
     // Update listeners for all cells
-    flkty.cells.forEach(function(cell) {
+    flkty.cells.forEach(function (cell) {
       updateListeners(cell.element);
     });
   });
 
   // Initial setup when the page loads
-  flkty.cells.forEach(function(cell) {
+  flkty.cells.forEach(function (cell) {
     updateListeners(cell.element);
   });
 
@@ -614,13 +627,13 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('mousemove', updatePosition);
 
     // Reset slider button and line position on mouseout
-    slider.addEventListener('mouseout', function() {
+    slider.addEventListener('mouseout', function () {
       sliderButton.style.left = `var(--position)`;
       sliderLine.style.left = `var(--position)`;
     });
 
     // Add input event listener to the slider for click and drag functionality
-    slider.addEventListener('input', function(e) {
+    slider.addEventListener('input', function (e) {
       var value = e.target.value;
       container.style.setProperty('--position', `${value}%`);
       sliderButton.style.left = `${value}%`;
@@ -631,11 +644,11 @@ document.addEventListener('DOMContentLoaded', function() {
   function resetListeners(element) {
     var slider = element.querySelector('.fty-slider');
     slider.removeEventListener('mousemove', updatePosition);
-    slider.removeEventListener('mouseout', function() {
+    slider.removeEventListener('mouseout', function () {
       sliderButton.style.left = `var(--position)`;
       sliderLine.style.left = `var(--position)`;
     });
-    slider.removeEventListener('input', function(e) {
+    slider.removeEventListener('input', function (e) {
       var value = e.target.value;
       container.style.setProperty('--position', `${value}%`);
       sliderButton.style.left = `${value}%`;
@@ -645,36 +658,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   let boxes = document.querySelectorAll('.box112');
 
-  let observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('scale-up');
-          } 
-      });
+  let observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scale-up');
+      }
+    });
   }, { threshold: 0.5 });
 
   boxes.forEach(box => {
-      observer.observe(box);
+    observer.observe(box);
   });
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
   function updateViewportHeight() {
     var viewport = $('#db-testimonials .flickity-viewport');
     var caseStudyCard = $('.fty-carousel-cell.is-selected .case-study-card');
-    
+
     // Check viewport width
     if ($(window).width() < 768) {
       // Get the height of the selected case study card
       var cardHeight = caseStudyCard.outerHeight();
-      
+
       // Calculate the new viewport height (adding 3 rem extra)
       var newViewportHeight = cardHeight + parseFloat($('html').css('font-size')) * 3; // Assuming 1 rem = font-size in pixels
-      
+
       // Set the viewport height
       viewport.height(newViewportHeight);
     } else {
@@ -687,12 +700,12 @@ $(document).ready(function() {
   updateViewportHeight();
 
   // Update height on Flickity change events
-  $('.flickity-viewport').on('select.flickity', function() {
+  $('.flickity-viewport').on('select.flickity', function () {
     updateViewportHeight();
   });
 
   // Update height on window resize
-  $(window).resize(function() {
+  $(window).resize(function () {
     updateViewportHeight();
   });
 });
