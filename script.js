@@ -89,7 +89,7 @@ $(document).ready(function () {
     },
     westafrica: {
       name: '<b>ABIDJAN</b>',
-      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr. Baba DIA<br>Executive Partner for West Africa,  Abidjan, Ivory Coast',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr. Baba DIA<br>Executive Partner for West Africa,<br> Abidjan, Ivory Coast',
       phones: ['+225-07-47-26-37-01', '+33-7-8380-88-46'],
       background: 'url(assets/country/white.jpeg)'
     }
