@@ -88,8 +88,8 @@ $(document).ready(function () {
       background: 'url(assets/country/white.jpeg)'
     },
     westafrica: {
-      name: '<b>WEST AFRICA</b>',
-      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Baba DIA<br>Executive Partner for West Africa, Abidjan & Ivory Coast',
+      name: '<b>ABIDJAN</b>',
+      address: '<b><span class="black-box-ai">AI</span> BOT PROPERTIES</b><br>Mr. Baba DIA<br>Executive Partner for West Africa,  Abidjan, Ivory Coast',
       phones: ['+225-07-47-26-37-01', '+33-7-8380-88-46'],
       background: 'url(assets/country/white.jpeg)'
     }
